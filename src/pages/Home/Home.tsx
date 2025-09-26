@@ -1,8 +1,8 @@
 import styles from "./Home.module.css";
 
-import Slider from "../../components/Slider";
+import Slider from "../../components/Slider/Slider.tsx";
 
-import Catalog from "../../components/Catalog";
+import Catalog from "../../components/Catalog/Catalog.tsx";
 import type { Producer } from "../../types/Producer.ts";
 import allProducers from "../../data/producers.ts";
 
