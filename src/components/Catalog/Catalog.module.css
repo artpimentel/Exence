@@ -1,5 +1,6 @@
+@import "../../styles/variables.css";
+
 .ProducersCatalog {
-  background: #1f1f1f;
   width: 100%;
 
   overflow: hidden;
@@ -14,7 +15,7 @@
   padding: 16px;
   margin: 0;
 
-  color: rgb(150, 150, 150);
+  color: var(--contrast-color);
   font-size: 16px;
 }
 
@@ -62,7 +63,7 @@
 
   z-index: 2;
 
-  color: white;
+  color: var(--contrast-color);
   font-size: 24px;
 
   cursor: pointer;

@@ -1,5 +1,6 @@
+@import "../../styles/variables.css";
+
 .header {
-  background: #1f1f1f;
   height: 10vh;
   width: 100%;
 
@@ -26,7 +27,7 @@
 }
 
 .searchBar {
-  background: #3f3f3f;
+  background: #2f2f2f;
   width: 256px;
 
   border-radius: 24px;
@@ -46,7 +47,7 @@
 
   border: none;
 
-  color: white;
+  color: var(--contrast-color);
   font-size: 12px;
 }
 
@@ -66,7 +67,7 @@
   align-items: center;
   justify-content: center;
 
-  color: white;
+  color: var(--contrast-color);
   font-size: 16px;
 
   cursor: pointer;
@@ -90,7 +91,7 @@
   align-items: center;
   justify-content: center;
 
-  color: white;
+  color: var(--contrast-color);
   font-size: 24px;
 
   cursor: pointer;
