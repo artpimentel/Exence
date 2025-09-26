@@ -8,7 +8,7 @@ import {
 } from "react-icons/io5";
 
 import type { Producer } from "../../types/Producer";
-import CatalogItem from "./catalogItem";
+import CatalogItem from "./CatalogItem/CatalogItem";
 
 interface ProducersCatalogProps {
   producers: Producer[];
