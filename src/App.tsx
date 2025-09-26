@@ -2,8 +2,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import "./styles/App.css";
 import MainLayout from "./layout/MainLayout";
-import HomePage from "./pages/Home";
-import RegisterPage from "./pages/Register";
+import HomePage from "./pages/Home/Home";
 
 function App() {
   return (
@@ -14,14 +13,6 @@ function App() {
           element={
             <MainLayout>
               <HomePage />
-            </MainLayout>
-          }
-        />
-        <Route
-          path="/register"
-          element={
-            <MainLayout>
-              <RegisterPage />
             </MainLayout>
           }
         />
