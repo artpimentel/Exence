@@ -1,0 +1,84 @@
+.highlightSlider {
+  background: #1f1f1f;
+  width: 100%;
+}
+
+.slider {
+  width: 100%;
+  max-width: 960px;
+  aspect-ratio: 21 / 9;
+  margin: 0 auto;
+
+  overflow: hidden;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  position: relative;
+}
+
+.slideContainer {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slideImage {
+  background: #1f1f1f;
+  width: 100%;
+  height: 100%;
+  flex-shrink: 0;
+}
+
+.controls {
+  width: 100%;
+
+  display: flex;
+  justify-content: space-between;
+
+  position: absolute;
+  z-index: 2;
+}
+
+.controls button {
+  background: transparent;
+  padding: 8px;
+
+  border: none;
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: white;
+  font-size: 24px;
+
+  cursor: pointer;
+}
+
+.indicators {
+  padding: 8px;
+
+  position: absolute;
+  align-self: flex-end;
+
+  text-align: center;
+}
+
+.indicators input[type="radio"] {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 2px solid white;
+  background-color: transparent;
+  margin: 0 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.indicators input[type="radio"]:checked {
+  background-color: white;
+}
