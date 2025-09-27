@@ -71,7 +71,7 @@
 
 .scrollButtonLeft:disabled,
 .scrollButtonRight:disabled {
-  opacity: 0;
+  visibility: hidden;
   cursor: default;
 
   transition: opacity 0.25s;

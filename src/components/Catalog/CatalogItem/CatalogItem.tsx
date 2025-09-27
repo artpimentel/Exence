@@ -14,7 +14,7 @@ function CatalogItem({ producer, isActive, highlight }: CatalogItemProps) {
         highlight ? styles.highlight : ""
       }`}
     >
-      <img className={styles.producerImage} src="" alt="" />
+      <img className={styles.producerImage} src={producer.image} alt="" />
       <div className={styles.itemInfo}>
         <h3 className={styles.producerName}>{producer.name}</h3>
         <span className={styles.procuderLocality}>{producer.locality}</span>

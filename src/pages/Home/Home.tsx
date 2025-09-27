@@ -8,11 +8,11 @@ import allProducers from "../../data/producers.ts";
 
 function Home2() {
   const producersNearYou = allProducers.filter(
-    (producer: Producer) => producer.locality === "Rio de Janeiro"
+    (producer: Producer) => producer.locality === "Zona-Sul"
   );
 
   const producersYouLike = allProducers.filter((producer: Producer) =>
-    producer.tags.includes("loira")
+    producer.tags.includes("Cabelo-Castanho")
   );
 
   const topProducers = allProducers.slice(0, 10);
