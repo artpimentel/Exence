@@ -1,4 +1,4 @@
-import styles from "./Home.module.css";
+//import styles from "./Home.module.css";
 
 import Slider from "../../components/Slider/Slider.tsx";
 
