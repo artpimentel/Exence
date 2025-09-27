@@ -15,20 +15,15 @@ function Home2() {
     producer.tags.includes("loira")
   );
 
+  const topProducers = allProducers.slice(0, 10);
+
   return (
     <>
       <Slider />
 
-      <Catalog
-        producers={producersYouLike}
-        title="Produtoras para o seu Gosto"
-        filter="Loira"
-      />
-      <Catalog
-        producers={producersNearYou}
-        title="Produtoras Próximas de Você"
-        filter="Rio de Janeiro"
-      />
+      <Catalog producers={producersYouLike} title="Recomendadas para Você" />
+      <Catalog producers={topProducers} title="Top Exence" highlight={true} />
+      <Catalog producers={producersNearYou} title="Próximas de Você" />
     </>
   );
 }

@@ -26,9 +26,7 @@
 }
 
 .catalogItens {
-  padding-top: 16px;
-  padding-bottom: 16px;
-  padding-inline: 10%;
+  padding: 16px;
 
   overflow: hidden;
 

@@ -4,12 +4,15 @@ import type { Producer } from "../../../types/Producer";
 interface CatalogItemProps {
   producer: Producer;
   isActive?: boolean;
+  highlight?: boolean;
 }
 
-function CatalogItem({ producer, isActive }: CatalogItemProps) {
+function CatalogItem({ producer, isActive, highlight }: CatalogItemProps) {
   return (
     <article
-      className={`${styles.catalogItem} ${isActive ? styles.active : ""}`}
+      className={`${styles.catalogItem} ${isActive ? styles.active : ""} ${
+        highlight ? styles.highlight : ""
+      }`}
     >
       <img className={styles.producerImage} src="" alt="" />
       <div className={styles.itemInfo}>

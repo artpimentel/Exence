@@ -10,10 +10,12 @@ import {
 import type { Producer } from "../../types/Producer";
 import CatalogItem from "./CatalogItem/CatalogItem";
 
-interface ProducersCatalogProps {
+interface CatalogProps {
   producers: Producer[];
   title: string;
-  filter: string;
+  maxItems?: number;
+  itemsPerPage?: number;
+  highlight?: boolean;
 }
 
 const ViewMoreItem = () => (
@@ -22,12 +24,19 @@ const ViewMoreItem = () => (
   </a>
 );
 
-function ProducersCatalog({ producers, title, filter }: ProducersCatalogProps) {
+function Catalog({
+  producers,
+  title,
+  maxItems,
+  itemsPerPage,
+  highlight = false,
+}: CatalogProps) {
+  maxItems = maxItems ?? (highlight ? 10 : 14);
+  itemsPerPage = itemsPerPage ?? (highlight ? 4 : 5);
+
   const scrollContainerRef = useRef<HTMLDivElement>(null);
-  const maxItems = 14;
 
   const [pageIndex, setPageIndex] = useState(0);
-  const itemsPerPage = 5;
 
   const producersToShow =
     producers.length > maxItems ? producers.slice(0, maxItems) : producers;
@@ -79,15 +88,21 @@ function ProducersCatalog({ producers, title, filter }: ProducersCatalogProps) {
   }, [pageIndex]);
 
   return (
-    <section className={styles.ProducersCatalog}>
-      <h2 className={styles.catalogTitle}>
-        {title} <span>({filter})</span>
-      </h2>
+    <section
+      className={`${styles.ProducersCatalog} ${
+        highlight ? styles.highlightCatalog : ""
+      }`}
+    >
+      <h2 className={styles.catalogTitle}>{title}</h2>
 
       <div className={styles.catalogContent}>
         <div className={styles.catalogItens} ref={scrollContainerRef}>
           {producersToShow.map((producer) => (
-            <CatalogItem key={producer.id} producer={producer} />
+            <CatalogItem
+              key={producer.id}
+              producer={producer}
+              highlight={highlight}
+            />
           ))}
           {hasMore && <ViewMoreItem />}
         </div>
@@ -114,4 +129,4 @@ function ProducersCatalog({ producers, title, filter }: ProducersCatalogProps) {
   );
 }
 
-export default ProducersCatalog;
+export default Catalog;

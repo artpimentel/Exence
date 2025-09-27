@@ -18,6 +18,11 @@
   transition: 0.25s ease-in-out;
 }
 
+.catalogItem.highlight {
+  height: 360px;
+  aspect-ratio: 3 / 4;
+}
+
 .catalogItem:hover {
   transform: scale(1.05);
   box-shadow: 0 0 16px rgb(0, 0, 0, 0.75);
