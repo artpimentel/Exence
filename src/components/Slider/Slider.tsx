@@ -18,7 +18,7 @@ const sliderData: Slide[] = [
   },
   {
     id: 2,
-    src: "https://www.riosexsite.com/files/banners/14092025_131659.jpg",
+    src: "../../../public/Logo VeenaSpa.png",
     alt: "Descrição da foto 2",
   },
   {

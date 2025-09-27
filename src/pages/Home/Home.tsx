@@ -21,8 +21,8 @@ function Home2() {
     <>
       <Slider />
 
-      <Catalog producers={producersYouLike} title="Recomendadas para Você" />
       <Catalog producers={topProducers} title="Top Exence" highlight={true} />
+      <Catalog producers={producersYouLike} title="Recomendadas para Você" />
       <Catalog producers={producersNearYou} title="Próximas de Você" />
     </>
   );

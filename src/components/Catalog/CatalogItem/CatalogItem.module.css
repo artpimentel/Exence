@@ -4,6 +4,7 @@
   height: 300px;
   aspect-ratio: 3 / 4;
 
+  border: 2px solid transparent;
   border-radius: 16px;
   box-shadow: 0 0 8px rgb(0, 0, 0, 0.75);
   overflow: hidden;
@@ -24,6 +25,7 @@
 
 .catalogItem:hover {
   transform: scale(1.05);
+  border: 2px solid var(--contrast-color);
   box-shadow: 0 0 16px rgb(0, 0, 0, 0.75);
 
   transition: 0.25s ease-in-out;
