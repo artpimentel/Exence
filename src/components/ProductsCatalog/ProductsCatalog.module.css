@@ -1,0 +1,10 @@
+.allProducersList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  gap: 16px;
+}
