@@ -1,4 +1,6 @@
 import { useRef, useState, useEffect } from "react";
+import { Link } from "react-router-dom";
+
 import styles from "./Catalog.module.css";
 
 import {
@@ -93,7 +95,10 @@ function Catalog({
         highlight ? styles.highlightCatalog : ""
       }`}
     >
-      <h2 className={styles.catalogTitle}>{title}</h2>
+      <div>
+        <span className={styles.catalogTitle}>{title}</span>
+        <Link to="/catalog">Veja mais</Link>
+      </div>
 
       <div className={styles.catalogContent}>
         <div className={styles.catalogItens} ref={scrollContainerRef}>
