@@ -4,33 +4,15 @@ import styles from "./Slider.module.css";
 
 import { IoChevronBackOutline, IoChevronForwardOutline } from "react-icons/io5";
 
-interface Slide {
-  id: number;
-  src: string;
-  alt: string;
+import type { Slide } from "../../data/sliderData";
+
+interface HighlightSliderProps {
+  slides: Slide[];
 }
 
-const sliderData: Slide[] = [
-  {
-    id: 1,
-    src: "https://www.riosexsite.com/files/banners/14092025_131650.jpg",
-    alt: "Descrição da foto 1",
-  },
-  {
-    id: 2,
-    src: "../../../public/Logo VeenaSpa.png",
-    alt: "Descrição da foto 2",
-  },
-  {
-    id: 3,
-    src: "https://www.riosexsite.com/files/banners/14092025_131709.jpg",
-    alt: "Descrição da foto 3",
-  },
-];
-
-function HighlightSlider() {
+function HighlightSlider({ slides }: HighlightSliderProps) {
   const [currentSlide, setCurrentSlide] = useState(0);
-  const totalSlides = sliderData.length;
+  const totalSlides = slides.length;
   const slideInterval = 5000;
 
   const goToNextSlide = () => {
@@ -60,7 +42,7 @@ function HighlightSlider() {
           className={styles.slideContainer}
           style={{ transform: `translateX(-${currentSlide * 100}%)` }}
         >
-          {sliderData.map((slide) => (
+          {slides.map((slide) => (
             <img
               key={slide.id}
               src={slide.src}
@@ -80,7 +62,7 @@ function HighlightSlider() {
         </div>
 
         <div className={styles.indicators}>
-          {sliderData.map((_, index) => (
+          {slides.map((_, index) => (
             <input
               key={index}
               type="radio"

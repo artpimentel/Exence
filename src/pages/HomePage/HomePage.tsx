@@ -1,5 +1,6 @@
 //import styles from "./Home.module.css";
 
+import sliderData from "../../data/sliderData.ts";
 import Slider from "../../components/Slider/Slider.tsx";
 
 import ProductsRow from "../../components/ProductsRow/ProductsRow.tsx";
@@ -19,7 +20,7 @@ function Home2() {
 
   return (
     <>
-      <Slider />
+      <Slider slides={sliderData} />
 
       <ProductsRow
         producers={topProducers}
