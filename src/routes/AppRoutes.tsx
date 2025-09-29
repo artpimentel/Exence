@@ -1,7 +1,7 @@
 import { Routes, Route } from "react-router-dom";
 import MainLayout from "../layout/MainLayout";
-import HomePage from "../pages/Home/Home";
-import CatalogPage from "../pages/Catalog/Catalog";
+import HomePage from "../pages/HomePage/HomePage";
+import CatalogPage from "../pages/CatalogPage/CatalogPage";
 
 function AppRoutes() {
   return (

@@ -1,16 +1,13 @@
 import { useRef, useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
-import styles from "./Catalog.module.css";
+import styles from "./ProductsRow.module.css";
 
-import {
-  IoChevronBackOutline,
-  IoChevronForwardOutline,
-  IoAddOutline,
-} from "react-icons/io5";
+import { IoAddOutline } from "react-icons/io5";
 
 import type { Producer } from "../../types/Producer";
-import CatalogItem from "./CatalogItem/CatalogItem";
+import CatalogItem from "../common/Product/Product";
+import RowControls from "../common/RowControls/RowControls";
 
 interface CatalogProps {
   producers: Producer[];
@@ -100,7 +97,7 @@ function Catalog({
         <Link to="/catalog">Veja mais</Link>
       </div>
 
-      <div className={styles.catalogContent}>
+      <ul className={styles.catalogList}>
         <div className={styles.catalogItens} ref={scrollContainerRef}>
           {producersToShow.map((producer) => (
             <CatalogItem
@@ -111,25 +108,14 @@ function Catalog({
           ))}
           {hasMore && <ViewMoreItem />}
         </div>
+      </ul>
 
-        <div className={styles.controls}>
-          <button
-            className={styles.scrollButtonLeft}
-            onClick={prevPage}
-            disabled={pageIndex === 0}
-          >
-            <IoChevronBackOutline />
-          </button>
-
-          <button
-            className={styles.scrollButtonRight}
-            onClick={nextPage}
-            disabled={pageIndex === totalPages - 1}
-          >
-            <IoChevronForwardOutline />
-          </button>
-        </div>
-      </div>
+      <RowControls
+        pageIndex={pageIndex}
+        totalPages={totalPages}
+        prevPage={prevPage}
+        nextPage={nextPage}
+      />
     </section>
   );
 }

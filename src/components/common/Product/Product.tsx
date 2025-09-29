@@ -1,4 +1,4 @@
-import styles from "./CatalogItem.module.css";
+import styles from "./Product.module.css";
 import type { Producer } from "../../../types/Producer";
 
 interface CatalogItemProps {
@@ -9,7 +9,7 @@ interface CatalogItemProps {
 
 function CatalogItem({ producer, isActive, highlight }: CatalogItemProps) {
   return (
-    <article
+    <li
       className={`${styles.catalogItem} ${isActive ? styles.active : ""} ${
         highlight ? styles.highlight : ""
       }`}
@@ -19,7 +19,7 @@ function CatalogItem({ producer, isActive, highlight }: CatalogItemProps) {
         <h3 className={styles.producerName}>{producer.name}</h3>
         <span className={styles.procuderLocality}>{producer.locality}</span>
       </div>
-    </article>
+    </li>
   );
 }
 

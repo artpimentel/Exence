@@ -1,4 +1,4 @@
-import Catalog from "./Catalog";
+import Catalog from "./ProductsRow";
 import type { Producer } from "../../types/Producer";
 
 interface HighlightsCatalogProps {

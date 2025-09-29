@@ -2,7 +2,7 @@
 
 import Slider from "../../components/Slider/Slider.tsx";
 
-import Catalog from "../../components/Catalog/Catalog.tsx";
+import ProductsRow from "../../components/ProductsRow/ProductsRow.tsx";
 import type { Producer } from "../../types/Producer.ts";
 import allProducers from "../../data/producers.ts";
 
@@ -21,9 +21,16 @@ function Home2() {
     <>
       <Slider />
 
-      <Catalog producers={topProducers} title="Top Exence" highlight={true} />
-      <Catalog producers={producersYouLike} title="Recomendadas para Você" />
-      <Catalog producers={producersNearYou} title="Próximas de Você" />
+      <ProductsRow
+        producers={topProducers}
+        title="Top Exence"
+        highlight={true}
+      />
+      <ProductsRow
+        producers={producersYouLike}
+        title="Recomendadas para Você"
+      />
+      <ProductsRow producers={producersNearYou} title="Próximas de Você" />
     </>
   );
 }
