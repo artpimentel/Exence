@@ -92,9 +92,11 @@ function Catalog({
         highlight ? styles.highlightCatalog : ""
       }`}
     >
-      <div>
+      <div className={styles.rowHeader}>
         <span className={styles.catalogTitle}>{title}</span>
-        <Link to="/catalog">Veja mais</Link>
+        <Link to="/catalog" className={styles.headerButton}>
+          Veja mais
+        </Link>
       </div>
 
       <ul className={styles.catalogList}>
