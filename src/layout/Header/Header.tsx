@@ -7,11 +7,15 @@ import {
   IoPersonOutline,
 } from "react-icons/io5";
 
+import { Link } from "react-router-dom";
+
 function Header() {
   return (
     <header className={styles.header}>
       <div className={styles.layout}>
-        <img src={Logo} alt="" className={styles.logo} />
+        <Link to="/">
+          <img src={Logo} alt="" className={styles.logo} />
+        </Link>
         <div className={styles.searchBar}>
           <input
             type="search"

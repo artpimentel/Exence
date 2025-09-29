@@ -11,8 +11,8 @@ function Home2() {
     (producer: Producer) => producer.locality === "Zona-Sul"
   );
 
-  const producersYouLike = allProducers.filter((producer: Producer) =>
-    producer.tags.includes("Cabelo-Castanho")
+  const producersYouLike = allProducers.filter(
+    (producer: Producer) => producer.tags.Cabelo === "Ruivo"
   );
 
   const topProducers = allProducers.slice(0, 10);

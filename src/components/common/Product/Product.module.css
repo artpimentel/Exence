@@ -49,6 +49,7 @@
   align-self: flex-end;
 
   color: var(--contrast-color);
+  font-family: sans-serif;
 }
 
 .producerName {

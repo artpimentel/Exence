@@ -7,14 +7,24 @@ const producers: Producer[] = [
     locality: "Centro",
     image:
       "https://veenaspa.com.br/wp-content/uploads/al_opt_content/IMAGE/veenaspa.com.br/wp-content/uploads/2025/08/ru-23.webp.bv.webp?bv_host=veenaspa.com.br",
-    tags: ["Cabelo-Preto", "Preta", "Alta", "magra"],
+    tags: {
+      Cabelo: "Preto",
+      Pele: "Preta",
+      Altura: "Alta",
+      Corpo: "Magra",
+    },
   },
   {
     id: 2,
     name: "Laís",
     locality: "Zona-Sul",
     image: "https://veenaspa.com.br/wp-content/uploads/2025/08/lai-23.webp",
-    tags: ["Cabelo-Preto", "Morena", "Alta", "magra"],
+    tags: {
+      Cabelo: "Preto",
+      Pele: "Morena",
+      Altura: "Alta",
+      Corpo: "Magra",
+    },
   },
   {
     id: 3,
@@ -22,28 +32,48 @@ const producers: Producer[] = [
     locality: "Zona-Norte",
     image:
       "https://veenaspa.com.br/wp-content/uploads/al_opt_content/IMAGE/veenaspa.com.br/wp-content/uploads/2025/08/ur-06.webp.bv.webp?bv_host=veenaspa.com.br",
-    tags: ["Cabelo-Castanho", "Branca", "Baixa", "magra"],
+    tags: {
+      Cabelo: "Castanho",
+      Pele: "Branca",
+      Altura: "Baixa",
+      Corpo: "Magra",
+    },
   },
   {
     id: 4,
     name: "Vanessa",
     locality: "Zona-Sul",
     image: "https://veenaspa.com.br/wp-content/uploads/2025/08/van-07.webp",
-    tags: ["Cabelo-Preto", "Preta", "Alta", "magra"],
+    tags: {
+      Cabelo: "Preto",
+      Pele: "Preta",
+      Altura: "Alta",
+      Corpo: "Magra",
+    },
   },
   {
     id: 5,
     name: "Pérola",
-    locality: "Zpna-Oeste",
+    locality: "Zona-Oeste",
     image: "https://veenaspa.com.br/wp-content/uploads/2025/08/pe-35-1.webp",
-    tags: ["Cabelo-Loiro", "Branca", "Alta", "magra"],
+    tags: {
+      Cabelo: "Loiro",
+      Pele: "Branca",
+      Altura: "Alta",
+      Corpo: "Magra",
+    },
   },
   {
     id: 6,
     name: "Clara",
     locality: "Zona-Oeste",
     image: "https://veenaspa.com.br/wp-content/uploads/2025/09/cla-03.webp",
-    tags: ["Cabelo-Ruivo", "Branca", "Alta", "magra"],
+    tags: {
+      Cabelo: "Ruivo",
+      Pele: "Branca",
+      Altura: "Alta",
+      Corpo: "Magra",
+    },
   },
   {
     id: 7,
@@ -51,7 +81,12 @@ const producers: Producer[] = [
     locality: "Zona-Sul",
     image:
       "https://veenaspa.com.br/wp-content/uploads/al_opt_content/IMAGE/veenaspa.com.br/wp-content/uploads/2025/08/jay-04.webp.bv.webp?bv_host=veenaspa.com.br",
-    tags: ["Cabelo-Castanho", "Branca", "Alta", "magra"],
+    tags: {
+      Cabelo: "Castanho",
+      Pele: "Branca",
+      Altura: "Alta",
+      Corpo: "Magra",
+    },
   },
 ];
 

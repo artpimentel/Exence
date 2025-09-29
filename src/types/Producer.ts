@@ -3,5 +3,7 @@ export interface Producer {
   name: string;
   locality: string;
   image: string;
-  tags: string[];
+  tags: {
+    [key: string]: string;
+  };
 }
