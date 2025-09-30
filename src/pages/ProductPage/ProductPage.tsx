@@ -23,21 +23,26 @@ function ProductPage() {
   }));
 
   return (
-    <section className={styles.productShowcase}>
-      <Slider slides={slides} className={styles.productSlider} />
-      <div className={styles.productInfo}>
-        <h1 className={styles.productName}>{producer.name}</h1>
-        <p>{producer.locality}</p>
-
+    <>
+      <section className={styles.productShowcase}>
+        <Slider slides={slides} className={styles.productSlider} />
+        <div className={styles.productInfo}>
+          <h1 className={styles.productName}>
+            {producer.name} <span>{producer.locality}</span>
+          </h1>
+          <p className={styles.productDesc}>{producer.description}</p>
+        </div>
+      </section>
+      <section>
         <ul>
-          {Object.entries(producer.tags).map(([key, value]) => (
+          {Object.entries(producer.appearance).map(([key, value]) => (
             <li key={key}>
               <strong>{key}:</strong> {value}
             </li>
           ))}
         </ul>
-      </div>
-    </section>
+      </section>
+    </>
   );
 }
 

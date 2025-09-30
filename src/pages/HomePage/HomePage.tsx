@@ -13,7 +13,7 @@ function Home2() {
   );
 
   const producersYouLike = allProducers.filter(
-    (producer: Producer) => producer.tags.Cabelo === "Ruivo"
+    (producer: Producer) => producer.appearance.Cabelo === "Ruivo"
   );
 
   const topProducers = allProducers.slice(0, 10);

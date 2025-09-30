@@ -4,91 +4,139 @@ const producers: Producer[] = [
   {
     id: 1,
     name: "Rubi",
+    age: 40,
     locality: "Centro",
+    description: "",
     images: [
       "https://veenaspa.com.br/wp-content/uploads/al_opt_content/IMAGE/veenaspa.com.br/wp-content/uploads/2025/08/ru-23.webp.bv.webp?bv_host=veenaspa.com.br",
     ],
-    tags: {
+    appearance: {
       Cabelo: "Preto",
+      Olhos: "Verde",
       Pele: "Preta",
+      Seios: "Grande",
+      Peso: 55,
       Altura: "Alta",
-      Corpo: "Magra",
+      Manequim: 36,
+      Pés: 37,
     },
   },
   {
     id: 2,
     name: "Laís",
+    age: 32,
     locality: "Zona-Sul",
+    description: "",
     images: ["https://veenaspa.com.br/wp-content/uploads/2025/08/lai-23.webp"],
-    tags: {
+
+    appearance: {
       Cabelo: "Preto",
+      Olhos: "",
       Pele: "Morena",
+      Seios: "Grande",
+      Peso: 57,
       Altura: "Alta",
-      Corpo: "Magra",
+      Manequim: 38,
+      Pés: 37,
     },
   },
   {
     id: 3,
     name: "Úrsula",
+    age: 28,
     locality: "Zona-Norte",
+    description: "",
     images: [
       "https://veenaspa.com.br/wp-content/uploads/al_opt_content/IMAGE/veenaspa.com.br/wp-content/uploads/2025/08/ur-06.webp.bv.webp?bv_host=veenaspa.com.br",
     ],
-    tags: {
+
+    appearance: {
       Cabelo: "Castanho",
+      Olhos: "Castanho",
       Pele: "Branca",
+      Seios: "Médio",
+      Peso: 52,
       Altura: "Baixa",
-      Corpo: "Magra",
+      Manequim: 34,
+      Pés: 36,
     },
   },
   {
     id: 4,
     name: "Vanessa",
+    age: 25,
     locality: "Zona-Sul",
+    description: "",
     images: ["https://veenaspa.com.br/wp-content/uploads/2025/08/van-07.webp"],
-    tags: {
+
+    appearance: {
       Cabelo: "Preto",
+      Olhos: "Preto",
       Pele: "Preta",
+      Seios: "Pequeno",
+      Peso: 56,
       Altura: "Alta",
-      Corpo: "Magra",
+      Manequim: 36,
+      Pés: 37,
     },
   },
   {
     id: 5,
     name: "Pérola",
+    age: 30,
     locality: "Zona-Oeste",
+    description: "",
     images: ["https://veenaspa.com.br/wp-content/uploads/2025/08/pe-35-1.webp"],
-    tags: {
+
+    appearance: {
       Cabelo: "Loiro",
+      Olhos: "Castanho",
       Pele: "Branca",
+      Seios: "Grande",
+      Peso: 54,
       Altura: "Alta",
-      Corpo: "Magra",
+      Manequim: 36,
+      Pés: 36,
     },
   },
   {
     id: 6,
     name: "Clara",
+    age: 23,
     locality: "Zona-Oeste",
+    description: "",
     images: ["https://veenaspa.com.br/wp-content/uploads/2025/09/cla-03.webp"],
-    tags: {
+
+    appearance: {
       Cabelo: "Ruivo",
+      Olhos: "Preto",
       Pele: "Branca",
+      Seios: "Pequeno",
+      Peso: 55,
       Altura: "Alta",
-      Corpo: "Magra",
+      Manequim: 36,
+      Pés: 37,
     },
   },
   {
     id: 7,
     name: "Jayni",
+    age: 32,
     locality: "Zona-Sul",
+    description: "",
     images: [
       "https://veenaspa.com.br/wp-content/uploads/al_opt_content/IMAGE/veenaspa.com.br/wp-content/uploads/2025/08/jay-04.webp.bv.webp?bv_host=veenaspa.com.br",
     ],
-    tags: {
+
+    appearance: {
       Cabelo: "Castanho",
+      Olhos: "Azul",
       Pele: "Branca",
+      Seios: "Médio",
+      Peso: 53,
       Altura: "Alta",
-      Corpo: "Magra",
+      Manequim: 34,
+      Pés: 36,
     },
   },
 ];
