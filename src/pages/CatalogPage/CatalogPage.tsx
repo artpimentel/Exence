@@ -11,11 +11,11 @@ function getUniqueFilters(producers: Producer[]) {
   const filtersMap: { [key: string]: Set<string> } = {};
 
   producers.forEach((producer) => {
-    Object.entries(producer.tags).forEach(([category, option]) => {
+    Object.entries(producer.appearance).forEach(([category, value]) => {
       if (!filtersMap[category]) {
         filtersMap[category] = new Set();
       }
-      filtersMap[category].add(option);
+      filtersMap[category].add(value.toString());
     });
   });
 
@@ -24,7 +24,6 @@ function getUniqueFilters(producers: Producer[]) {
     options: Array.from(optionsSet).sort(),
   }));
 }
-
 function Catalog() {
   const filterData = getUniqueFilters(allProducers);
 
@@ -54,7 +53,10 @@ function Catalog() {
 
     return Object.entries(selectedFilters).every(([category, options]) => {
       if (options.length === 0) return true;
-      return options.includes(producer.tags[category]);
+
+      const value =
+        producer.appearance[category as keyof typeof producer.appearance];
+      return options.includes(value.toString());
     });
   });
 

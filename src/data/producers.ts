@@ -7,6 +7,8 @@ const producers: Producer[] = [
     age: 40,
     locality: "Centro",
     description: "",
+    phone: "",
+    at: "",
     images: [
       "https://veenaspa.com.br/wp-content/uploads/al_opt_content/IMAGE/veenaspa.com.br/wp-content/uploads/2025/08/ru-23.webp.bv.webp?bv_host=veenaspa.com.br",
     ],
@@ -27,6 +29,8 @@ const producers: Producer[] = [
     age: 32,
     locality: "Zona-Sul",
     description: "",
+    phone: "",
+    at: "",
     images: ["https://veenaspa.com.br/wp-content/uploads/2025/08/lai-23.webp"],
 
     appearance: {
@@ -46,6 +50,8 @@ const producers: Producer[] = [
     age: 28,
     locality: "Zona-Norte",
     description: "",
+    phone: "",
+    at: "",
     images: [
       "https://veenaspa.com.br/wp-content/uploads/al_opt_content/IMAGE/veenaspa.com.br/wp-content/uploads/2025/08/ur-06.webp.bv.webp?bv_host=veenaspa.com.br",
     ],
@@ -67,6 +73,8 @@ const producers: Producer[] = [
     age: 25,
     locality: "Zona-Sul",
     description: "",
+    phone: "",
+    at: "",
     images: ["https://veenaspa.com.br/wp-content/uploads/2025/08/van-07.webp"],
 
     appearance: {
@@ -86,6 +94,8 @@ const producers: Producer[] = [
     age: 30,
     locality: "Zona-Oeste",
     description: "",
+    phone: "",
+    at: "",
     images: ["https://veenaspa.com.br/wp-content/uploads/2025/08/pe-35-1.webp"],
 
     appearance: {
@@ -105,6 +115,8 @@ const producers: Producer[] = [
     age: 23,
     locality: "Zona-Oeste",
     description: "",
+    phone: "",
+    at: "",
     images: ["https://veenaspa.com.br/wp-content/uploads/2025/09/cla-03.webp"],
 
     appearance: {
@@ -124,6 +136,8 @@ const producers: Producer[] = [
     age: 32,
     locality: "Zona-Sul",
     description: "",
+    phone: "",
+    at: "",
     images: [
       "https://veenaspa.com.br/wp-content/uploads/al_opt_content/IMAGE/veenaspa.com.br/wp-content/uploads/2025/08/jay-04.webp.bv.webp?bv_host=veenaspa.com.br",
     ],

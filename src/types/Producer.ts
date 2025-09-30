@@ -6,6 +6,9 @@ export interface Producer {
   locality: string;
   description: string;
 
+  phone: string;
+  at: string;
+
   appearance: {
     Cabelo: string;
     Olhos: string;

@@ -2,9 +2,10 @@
 import { useParams } from "react-router-dom";
 import styles from "./ProductPage.module.css";
 
-import Slider from "../../components/Slider/Slider";
 import allProducers from "../../data/producers";
 import type { Producer } from "../../types/Producer";
+
+import ProductShowcase from "../../components/common/ProductShowcase/ProductShowcase";
 
 function ProductPage() {
   const { id } = useParams<{ id: string }>();
@@ -16,27 +17,14 @@ function ProductPage() {
     return <p>Produto não encontrado</p>;
   }
 
-  const slides = producer.images.map((src, index) => ({
-    id: index,
-    src,
-    alt: `${producer.name} - imagem ${index + 1}`,
-  }));
-
   return (
     <>
-      <section className={styles.productShowcase}>
-        <Slider slides={slides} className={styles.productSlider} />
-        <div className={styles.productInfo}>
-          <h1 className={styles.productName}>
-            {producer.name} <span>{producer.locality}</span>
-          </h1>
-          <p className={styles.productDesc}>{producer.description}</p>
-        </div>
-      </section>
-      <section>
-        <ul>
+      <ProductShowcase producer={producer} />
+
+      <section className={styles.productSpecifies}>
+        <ul className={styles.specifiesList}>
           {Object.entries(producer.appearance).map(([key, value]) => (
-            <li key={key}>
+            <li key={key} className={styles.specify}>
               <strong>{key}:</strong> {value}
             </li>
           ))}

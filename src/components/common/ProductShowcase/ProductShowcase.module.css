@@ -1,0 +1,103 @@
+.productShowcase {
+  width: 100%;
+  max-width: 960px;
+
+  margin: 16px auto;
+
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  gap: 16px;
+}
+
+.productSlider {
+  min-width: 50%;
+  aspect-ratio: 3 / 4;
+}
+
+.productInfo {
+  background: var(--complementary-color);
+  width: 100%;
+  padding: 16px;
+
+  border-radius: 16px;
+
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 8px;
+
+  color: var(--contrast-color);
+  font-family: sans-serif;
+}
+
+.productHeader {
+  width: 100%;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.favoriteButton {
+  background: transparent;
+  aspect-ratio: 1 / 1;
+  padding: 8px;
+
+  outline: none;
+  border: none;
+  border-radius: 50%;
+
+  font-size: 24px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: var(--contrast-color);
+
+  cursor: pointer;
+}
+
+.productName {
+  margin: 0;
+}
+
+.productName span {
+  opacity: 75%;
+  font-size: 12px;
+}
+
+.contactsOptions {
+  width: 100%;
+
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  gap: 16px;
+}
+
+.contactButton {
+  width: 100%;
+  padding: 8px;
+
+  outline: none;
+  border: none;
+  border-radius: 8px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: white;
+  font-size: 32px;
+
+  cursor: pointer;
+}
+
+.whatsapp {
+  background: #25d366;
+}
+
+.instagram {
+  background: #e1306c;
+}
