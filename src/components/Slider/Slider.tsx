@@ -8,9 +8,10 @@ import type { Slide } from "../../data/sliderData";
 
 interface HighlightSliderProps {
   slides: Slide[];
+  className?: string;
 }
 
-function HighlightSlider({ slides }: HighlightSliderProps) {
+function HighlightSlider({ slides, className }: HighlightSliderProps) {
   const [currentSlide, setCurrentSlide] = useState(0);
   const totalSlides = slides.length;
   const slideInterval = 5000;
@@ -36,7 +37,7 @@ function HighlightSlider({ slides }: HighlightSliderProps) {
   });
 
   return (
-    <section className={styles.highlightSlider}>
+    <section className={`${styles.highlightSlider} ${className || ""}`}>
       <div className={styles.slider}>
         <div
           className={styles.slideContainer}

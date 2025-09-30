@@ -23,6 +23,6 @@
 
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  justify-items: stretch;
+  justify-items: center;
   gap: 16px;
 }

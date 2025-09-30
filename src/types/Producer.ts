@@ -2,7 +2,7 @@ export interface Producer {
   id: number;
   name: string;
   locality: string;
-  image: string;
+  images: string[];
   tags: {
     [key: string]: string;
   };

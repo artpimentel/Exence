@@ -1,0 +1,13 @@
+.productShowcase {
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+.productSlider {
+  height: 384px;
+  aspect-ratio: 1 / 1;
+}
+
+.productInfo {
+  flex: 0 0 50%;
+}
