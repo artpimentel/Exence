@@ -1,0 +1,7 @@
+.homeSlider {
+  width: 640px;
+  max-width: 960px;
+  aspect-ratio: 21 / 9;
+
+  margin: 16px auto;
+}

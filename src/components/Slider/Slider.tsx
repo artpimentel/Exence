@@ -37,42 +37,40 @@ function HighlightSlider({ slides, className }: HighlightSliderProps) {
   });
 
   return (
-    <section className={`${styles.highlightSlider} ${className || ""}`}>
-      <div className={styles.slider}>
-        <div
-          className={styles.slideContainer}
-          style={{ transform: `translateX(-${currentSlide * 100}%)` }}
-        >
-          {slides.map((slide) => (
-            <img
-              key={slide.id}
-              src={slide.src}
-              alt={slide.alt}
-              className={styles.slideImage}
-            />
-          ))}
-        </div>
+    <section className={`${styles.slider} ${className || ""}`}>
+      <div
+        className={styles.slideContainer}
+        style={{ transform: `translateX(-${currentSlide * 100}%)` }}
+      >
+        {slides.map((slide) => (
+          <img
+            key={slide.id}
+            src={slide.src}
+            alt={slide.alt}
+            className={styles.slideImage}
+          />
+        ))}
+      </div>
 
-        <div className={styles.controls}>
-          <button onClick={goToPrevSlide}>
-            <IoChevronBackOutline />
-          </button>
-          <button onClick={goToNextSlide}>
-            <IoChevronForwardOutline />
-          </button>
-        </div>
+      <div className={styles.controls}>
+        <button onClick={goToPrevSlide}>
+          <IoChevronBackOutline />
+        </button>
+        <button onClick={goToNextSlide}>
+          <IoChevronForwardOutline />
+        </button>
+      </div>
 
-        <div className={styles.indicators}>
-          {slides.map((_, index) => (
-            <input
-              key={index}
-              type="radio"
-              name="slider-indicator"
-              checked={index === currentSlide}
-              onChange={() => goToSlide(index)}
-            />
-          ))}
-        </div>
+      <div className={styles.indicators}>
+        {slides.map((_, index) => (
+          <input
+            key={index}
+            type="radio"
+            name="slider-indicator"
+            checked={index === currentSlide}
+            onChange={() => goToSlide(index)}
+          />
+        ))}
       </div>
     </section>
   );
