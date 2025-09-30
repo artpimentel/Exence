@@ -31,17 +31,16 @@
 }
 
 .headerButton {
-  background: var(--complementary-color);
   padding: 8px 12px;
 
   border-radius: 16px;
-  box-shadow: 0 0 4px black;
 
   display: flex;
   align-items: center;
   justify-content: center;
 
   color: var(--contrast-color);
+  font-size: 12px;
   text-decoration: none;
 
   transition: 0.25s ease-in-out;
@@ -49,6 +48,7 @@
 
 .headerButton:hover {
   background: var(--primary-color);
+  box-shadow: 0 0 4px black;
   color: var(--background-color);
 
   transition: 0.25s ease-in-out;

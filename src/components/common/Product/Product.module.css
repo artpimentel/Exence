@@ -46,7 +46,7 @@
   padding: 16px 20px;
 
   position: absolute;
-  align-self: flex-end;
+  transform: translateY(-100%);
 
   color: var(--contrast-color);
   font-family: sans-serif;
