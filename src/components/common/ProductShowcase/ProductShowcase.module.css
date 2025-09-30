@@ -11,7 +11,7 @@
 }
 
 .productSlider {
-  min-width: 50%;
+  flex: 0 0 50%;
   aspect-ratio: 3 / 4;
 }
 
@@ -60,6 +60,11 @@
 
 .productName {
   margin: 0;
+}
+
+.productDesc {
+  text-align: justify;
+  hyphens: auto;
 }
 
 .productName span {
