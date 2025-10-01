@@ -1,5 +1,10 @@
 import styles from "./ProductShowcase.module.css";
-import { FaWhatsapp, FaInstagram, FaRegHeart } from "react-icons/fa6";
+import {
+  FaWhatsapp,
+  FaInstagram,
+  FaTelegram,
+  FaRegHeart,
+} from "react-icons/fa6";
 import Slider from "../../Slider/Slider";
 import type { Producer } from "../../../types/Producer";
 
@@ -29,18 +34,32 @@ function ProductShowcase({ producer }: ProductShowcaseProps) {
         </div>
         <p className={styles.productDesc}>{producer.description}</p>
         <div className={styles.contactsOptions}>
-          <a
-            href={producer.phone}
-            className={`${styles.contactButton} ${styles.whatsapp}`}
-          >
-            <FaWhatsapp />
-          </a>
-          <a
-            href={producer.at}
-            className={`${styles.contactButton} ${styles.instagram}`}
-          >
-            <FaInstagram />
-          </a>
+          {producer.phone && (
+            <a
+              href={`https://wa.me/${producer.phone}`}
+              className={`${styles.contactButton} ${styles.whatsapp}`}
+            >
+              <FaWhatsapp />
+            </a>
+          )}
+
+          {producer.instagram && (
+            <a
+              href={`https://www.instagram.com/${producer.instagram}`}
+              className={`${styles.contactButton} ${styles.instagram}`}
+            >
+              <FaInstagram />
+            </a>
+          )}
+
+          {producer.telegram && (
+            <a
+              href={`https://t.me/${producer.telegram}`}
+              className={`${styles.contactButton} ${styles.telegram}`}
+            >
+              <FaTelegram />{" "}
+            </a>
+          )}
         </div>
       </div>
     </section>

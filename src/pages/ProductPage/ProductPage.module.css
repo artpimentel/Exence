@@ -18,7 +18,7 @@
 .specify {
   padding: 12px;
 
-  border-bottom: 2px solid var(--contrast-color);
+  border-bottom: 1px solid var(--contrast-color);
   border-collapse: collapse;
 
   display: grid;

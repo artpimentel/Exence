@@ -58,22 +58,47 @@
   position: absolute;
   align-self: flex-end;
 
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 8px;
+
   text-align: center;
 }
 
 .indicators input[type="radio"] {
   appearance: none;
   -webkit-appearance: none;
+
+  background: transparent;
   width: 12px;
   height: 12px;
+  margin: 0;
   border-radius: 50%;
   border: 2px solid var(--contrast-color);
-  background-color: transparent;
-  margin: 0 5px;
+
   cursor: pointer;
+
   transition: background-color 0.3s ease;
 }
 
 .indicators input[type="radio"]:checked {
   background-color: var(--contrast-color);
+}
+
+.thumbnail {
+  height: 48px;
+  aspect-ratio: 1 / 1;
+
+  object-fit: cover;
+
+  border: 1px solid transparent;
+  border-radius: 4px;
+
+  cursor: pointer;
+  transition: border 0.3s ease;
+}
+
+.thumbnail:hover,
+.thumbnail.active {
+  border-color: var(--contrast-color);
 }

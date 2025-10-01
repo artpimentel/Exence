@@ -3,7 +3,6 @@ import type { Producer } from "../types/Producer";
 const producers: Producer[] = [
   {
     id: 1,
-    // Data de cadastro no início de Julho
     createdAt: "2025-07-05T14:30:00.000Z",
     gender: "female",
     nationality: "Brasileira",
@@ -35,7 +34,6 @@ const producers: Producer[] = [
   },
   {
     id: 2,
-    // Data de cadastro no final de Setembro (Mais Recente)
     createdAt: "2025-09-28T10:05:00.000Z",
     gender: "female",
     nationality: "Brasileira",
@@ -67,7 +65,6 @@ const producers: Producer[] = [
   },
   {
     id: 3,
-    // Data de cadastro no meio de Agosto
     createdAt: "2025-08-15T18:10:00.000Z",
     gender: "female",
     nationality: "Brasileira",
@@ -99,7 +96,6 @@ const producers: Producer[] = [
   },
   {
     id: 4,
-    // Data de cadastro no início de Setembro
     createdAt: "2025-09-02T09:15:00.000Z",
     gender: "female",
     nationality: "Brasileira",
@@ -131,7 +127,6 @@ const producers: Producer[] = [
   },
   {
     id: 5,
-    // Data de cadastro no final de Julho (Mais Antiga)
     createdAt: "2025-07-29T20:20:00.000Z",
     gender: "female",
     nationality: "Brasileira",
@@ -163,14 +158,13 @@ const producers: Producer[] = [
   },
   {
     id: 6,
-    // Data de cadastro no meio de Setembro
     createdAt: "2025-09-10T12:25:00.000Z",
     gender: "female",
     nationality: "Brasileira",
     email: "clara@exemplo.com",
     phone: "5521944443333",
     instagram: "clara_art",
-    telegram: undefined,
+    telegram: "clara_art",
     languages: [{ name: "Português", level: "Fluente" }],
     name: "Clara",
     description:
@@ -195,13 +189,12 @@ const producers: Producer[] = [
   },
   {
     id: 7,
-    // Data de cadastro no início de Agosto
     createdAt: "2025-08-08T11:30:00.000Z",
     gender: "female",
     nationality: "Brasileira",
     email: "jayni@exemplo.com",
     phone: "5521933332222",
-    instagram: "jayni_bra",
+    instagram: undefined,
     telegram: undefined,
     languages: [{ name: "Português", level: "Fluente" }],
     name: "Jayni",

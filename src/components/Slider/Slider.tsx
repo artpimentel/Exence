@@ -12,6 +12,8 @@ interface HighlightSliderProps {
 }
 
 function HighlightSlider({ slides, className }: HighlightSliderProps) {
+  const isProductPage = className?.includes("productSlider");
+
   const [currentSlide, setCurrentSlide] = useState(0);
   const totalSlides = slides.length;
   const slideInterval = 5000;
@@ -62,15 +64,27 @@ function HighlightSlider({ slides, className }: HighlightSliderProps) {
       </div>
 
       <div className={styles.indicators}>
-        {slides.map((_, index) => (
-          <input
-            key={index}
-            type="radio"
-            name="slider-indicator"
-            checked={index === currentSlide}
-            onChange={() => goToSlide(index)}
-          />
-        ))}
+        {slides.map((slide, index) =>
+          isProductPage ? (
+            <img
+              key={index}
+              src={slide.src}
+              alt={slide.alt}
+              className={`${styles.thumbnail} ${
+                index === currentSlide ? styles.active : ""
+              }`}
+              onClick={() => goToSlide(index)}
+            />
+          ) : (
+            <input
+              key={index}
+              type="radio"
+              name="slider-indicator"
+              checked={index === currentSlide}
+              onChange={() => goToSlide(index)}
+            />
+          )
+        )}
       </div>
     </section>
   );
