@@ -21,43 +21,45 @@ function ProductShowcase({ producer }: ProductShowcaseProps) {
 
   return (
     <section className={styles.productShowcase}>
-      <Slider slides={slides} className={styles.productSlider} />
+      <div className={styles.showcaseContent}>
+        <Slider slides={slides} className={styles.productSlider} />
 
-      <div className={styles.productInfo}>
-        <div className={styles.productHeader}>
-          <h1 className={styles.productName}>
-            {producer.name} <span>{producer.locality}</span>
-          </h1>
-          <button className={styles.favoriteButton}>
-            <FaRegHeart />
-          </button>
-        </div>
-        <p className={styles.productDesc}>{producer.description}</p>
-        <div className={styles.contactsOptions}>
-          {producer.phone && (
-            <a
-              href={`https://wa.me/${producer.phone}`}
-              className={`${styles.contactButton} ${styles.whatsapp}`}
-            >
-              <FaWhatsapp />
-            </a>
-          )}
-          {producer.telegram && (
-            <a
-              href={`https://t.me/${producer.telegram}`}
-              className={`${styles.contactButton} ${styles.telegram}`}
-            >
-              <FaTelegram />{" "}
-            </a>
-          )}
-          {producer.instagram && (
-            <a
-              href={`https://www.instagram.com/${producer.instagram}`}
-              className={`${styles.contactButton} ${styles.instagram}`}
-            >
-              <FaInstagram />
-            </a>
-          )}
+        <div className={styles.productInfo}>
+          <div className={styles.productHeader}>
+            <h1 className={styles.productName}>
+              {producer.name} <span>{producer.locality}</span>
+            </h1>
+            <button className={styles.favoriteButton}>
+              <FaRegHeart />
+            </button>
+          </div>
+          <p className={styles.productDesc}>{producer.description}</p>
+          <div className={styles.contactsOptions}>
+            {producer.phone && (
+              <a
+                href={`https://wa.me/${producer.phone}`}
+                className={`${styles.contactButton} ${styles.whatsapp}`}
+              >
+                <FaWhatsapp />
+              </a>
+            )}
+            {producer.telegram && (
+              <a
+                href={`https://t.me/${producer.telegram}`}
+                className={`${styles.contactButton} ${styles.telegram}`}
+              >
+                <FaTelegram />{" "}
+              </a>
+            )}
+            {producer.instagram && (
+              <a
+                href={`https://www.instagram.com/${producer.instagram}`}
+                className={`${styles.contactButton} ${styles.instagram}`}
+              >
+                <FaInstagram />
+              </a>
+            )}
+          </div>
         </div>
       </div>
     </section>

@@ -2,6 +2,5 @@
   width: 100%;
   max-width: 640px;
   aspect-ratio: 21 / 9;
-
-  margin: 16px auto;
+  margin: 0 16px;
 }
