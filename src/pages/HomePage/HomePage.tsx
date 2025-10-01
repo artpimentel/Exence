@@ -18,10 +18,17 @@ function Home2() {
 
   const topProducers = allProducers.slice(0, 10);
 
+  const producersCopy = [...allProducers];
+
+  const newProducers = producersCopy.sort((a, b) => {
+    return b.createdAt.localeCompare(a.createdAt);
+  });
+
   return (
     <>
       <Slider slides={sliderData} className={styles.homeSlider} />
 
+      <ProductsRow producers={newProducers} title="Novidades" />
       <ProductsRow
         producers={topProducers}
         title="Top Exence"
