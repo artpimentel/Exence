@@ -5,7 +5,8 @@ import styles from "./ProductPage.module.css";
 import allProducers from "../../data/producers";
 import type { Producer } from "../../types/Producer";
 
-import ProductShowcase from "../../components/common/ProductShowcase/ProductShowcase";
+import Slider from "../../components/Slider/Slider";
+import ProductInfos from "../../components/common/ProductShowcase/ProductInfos";
 
 function ProductPage() {
   const { id } = useParams<{ id: string }>();
@@ -17,18 +18,35 @@ function ProductPage() {
     return <p>Produto não encontrado</p>;
   }
 
+  const slides = producer.images.map((src, index) => ({
+    id: index,
+    src,
+    alt: `${producer.name} - imagem ${index + 1}`,
+  }));
+
   return (
     <>
-      <ProductShowcase producer={producer} />
+      <section className={styles.productShowcase}>
+        <div className={styles.showcaseContent}>
+          <Slider slides={slides} className={styles.productSlider} />
+
+          <ProductInfos producer={producer} />
+        </div>
+      </section>
 
       <section className={styles.productSpecifies}>
-        <ul className={styles.specifiesList}>
-          {Object.entries(producer.appearance).map(([key, value]) => (
-            <li key={key} className={styles.specify}>
-              <strong>{key}:</strong> {value}
-            </li>
-          ))}
-        </ul>
+        <div className={styles.specifiesContent}>
+          <ul className={styles.specifiesList}>
+            {Object.entries(producer.appearance).map(([key, value]) => (
+              <li key={key} className={styles.specify}>
+                <strong>{key}:</strong> {value}
+              </li>
+            ))}
+          </ul>
+          <div className={styles.extraContent}>
+            <a href=""></a>
+          </div>
+        </div>
       </section>
     </>
   );
