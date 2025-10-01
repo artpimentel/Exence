@@ -4,18 +4,9 @@ import sliderData from "../../data/sliderData.ts";
 import Slider from "../../components/Slider/Slider.tsx";
 
 import ProductsRow from "../../components/ProductsRow/ProductsRow.tsx";
-import type { Producer } from "../../types/Producer.ts";
 import allProducers from "../../data/producers.ts";
 
 function Home2() {
-  const producersNearYou = allProducers.filter(
-    (producer: Producer) => producer.locality === "Zona-Sul"
-  );
-
-  const producersYouLike = allProducers.filter(
-    (producer: Producer) => producer.appearance.Cabelo === "Ruivo"
-  );
-
   const topProducers = allProducers.slice(0, 10);
 
   const producersCopy = [...allProducers];
