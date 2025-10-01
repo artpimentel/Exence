@@ -24,6 +24,7 @@
 
 .catalogTitle {
   margin: 0;
+  padding-inline: 16px;
 
   color: var(--contrast-color);
   font-size: 16px;
@@ -31,7 +32,8 @@
 }
 
 .headerButton {
-  padding: 8px 12px;
+  padding: 4px 8px;
+  margin-inline: 8px;
 
   border-radius: 16px;
 
