@@ -8,13 +8,5 @@ interface HighlightsCatalogProps {
 export default function HighlightsCatalog({
   producers,
 }: HighlightsCatalogProps) {
-  return (
-    <Catalog
-      producers={producers}
-      title="Top"
-      maxItems={10}
-      itemsPerPage={4}
-      highlight
-    />
-  );
+  return <Catalog producers={producers} title="Top" maxItems={10} highlight />;
 }
