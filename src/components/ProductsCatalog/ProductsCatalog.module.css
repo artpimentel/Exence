@@ -25,3 +25,9 @@
   justify-items: center;
   gap: 16px;
 }
+
+@media (max-width: 768px) {
+  .allProducersList {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

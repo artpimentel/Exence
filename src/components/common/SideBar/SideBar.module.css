@@ -57,3 +57,9 @@ input[type="checkbox"]:checked {
 
   cursor: pointer;
 }
+
+@media (max-width: 768px) {
+  .layout {
+    display: none;
+  }
+}
