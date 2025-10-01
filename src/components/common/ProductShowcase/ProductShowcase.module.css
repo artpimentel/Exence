@@ -24,7 +24,6 @@
 
   display: flex;
   flex-flow: column nowrap;
-  gap: 8px;
 
   color: var(--contrast-color);
   font-family: sans-serif;

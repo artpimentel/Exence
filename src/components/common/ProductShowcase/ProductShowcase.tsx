@@ -42,22 +42,20 @@ function ProductShowcase({ producer }: ProductShowcaseProps) {
               <FaWhatsapp />
             </a>
           )}
-
-          {producer.instagram && (
-            <a
-              href={`https://www.instagram.com/${producer.instagram}`}
-              className={`${styles.contactButton} ${styles.instagram}`}
-            >
-              <FaInstagram />
-            </a>
-          )}
-
           {producer.telegram && (
             <a
               href={`https://t.me/${producer.telegram}`}
               className={`${styles.contactButton} ${styles.telegram}`}
             >
               <FaTelegram />{" "}
+            </a>
+          )}
+          {producer.instagram && (
+            <a
+              href={`https://www.instagram.com/${producer.instagram}`}
+              className={`${styles.contactButton} ${styles.instagram}`}
+            >
+              <FaInstagram />
             </a>
           )}
         </div>
