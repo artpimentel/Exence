@@ -9,71 +9,76 @@ import type { Producer } from "../../types/Producer";
 import CatalogItem from "../common/Product/Product";
 import RowControls from "../common/RowControls/RowControls";
 
-interface CatalogProps {
-  producers: Producer[];
-  title: string;
-  maxItems?: number;
-  itemsPerPage?: number;
-  highlight?: boolean;
-}
-
 const ViewMoreItem = () => (
   <a className={styles.viewMoreItem} href="/ver-mais">
     <IoAddOutline />
   </a>
 );
 
-function Catalog({
+interface ProductRowProps {
+  producers: Producer[];
+  title: string;
+  maxItems?: number;
+  highlight?: boolean;
+}
+
+function ProductRow({
   producers,
   title,
   maxItems,
-  itemsPerPage,
   highlight = false,
-}: CatalogProps) {
-  maxItems = maxItems ?? (highlight ? 10 : 14);
-  itemsPerPage = itemsPerPage ?? (highlight ? 4 : 5);
+}: ProductRowProps) {
+  const scrollContainerRef = useRef<HTMLUListElement>(null);
 
-  const scrollContainerRef = useRef<HTMLDivElement>(null);
-
+  const [itemsPerPage, setItemsPerPage] = useState(0);
   const [pageIndex, setPageIndex] = useState(0);
+
+  useEffect(() => {
+    const updateItemsPerPage = () => {
+      if (!scrollContainerRef.current) return;
+
+      const containerWidth = scrollContainerRef.current.offsetWidth;
+      const item = scrollContainerRef.current.querySelector("li");
+      if (!item) return;
+
+      const itemWidth = (item as HTMLElement).offsetWidth;
+      const gap = parseFloat(
+        getComputedStyle(scrollContainerRef.current).gap || "16"
+      );
+
+      const perPage = Math.floor((containerWidth + gap) / (itemWidth + gap));
+      setItemsPerPage(perPage);
+    };
+
+    updateItemsPerPage();
+    window.addEventListener("resize", updateItemsPerPage);
+    return () => window.removeEventListener("resize", updateItemsPerPage);
+  }, []);
+
+  maxItems = maxItems ?? (highlight ? 10 : 29);
 
   const producersToShow =
     producers.length > maxItems ? producers.slice(0, maxItems) : producers;
   const hasMore = producers.length > maxItems;
 
   const totalItems = producersToShow.length + (hasMore ? 1 : 0);
-  const totalPages = Math.ceil(totalItems / itemsPerPage);
+  const totalPages =
+    itemsPerPage > 0 ? Math.ceil(totalItems / itemsPerPage) : 0;
 
   const scrollToPage = (page: number) => {
     if (!scrollContainerRef.current) return;
 
     const container = scrollContainerRef.current;
-    const items = container.children;
+    const item = container.children[0] as HTMLElement;
+    if (!item) return;
 
-    if (!items[0]) return;
+    const itemWidth = item.offsetWidth;
+    const gap = parseFloat(getComputedStyle(container).gap || "16");
 
-    const firstItem = items[0] as HTMLElement;
-    const itemWidth = firstItem.offsetWidth;
-    const gap = 16;
-
-    const blockWidth = itemsPerPage * itemWidth + (itemsPerPage - 1) * gap;
-    const containerWidth = container.offsetWidth;
-
-    const style = window.getComputedStyle(container);
-    const paddingLeft = parseFloat(style.paddingLeft) || 0;
-    const paddingRight = parseFloat(style.paddingRight) || 0;
-
-    const startIndex = page * itemsPerPage;
-    const startOffset = startIndex * (itemWidth + gap) + paddingLeft;
-
-    const maxScroll = container.scrollWidth - containerWidth + paddingRight;
-
-    const scrollAmount = startOffset - (containerWidth / 2 - blockWidth / 2);
-
-    const finalScroll = Math.max(0, Math.min(scrollAmount, maxScroll));
+    const scrollAmount = page * (itemWidth + gap) * itemsPerPage;
 
     container.scrollTo({
-      left: finalScroll,
+      left: scrollAmount,
       behavior: "smooth",
     });
   };
@@ -83,8 +88,10 @@ function Catalog({
     setPageIndex((prev) => Math.min(prev + 1, totalPages - 1));
 
   useEffect(() => {
-    scrollToPage(pageIndex);
-  }, [pageIndex]);
+    if (itemsPerPage > 0) {
+      scrollToPage(pageIndex);
+    }
+  }, [pageIndex, itemsPerPage]);
 
   return (
     <section
@@ -99,17 +106,17 @@ function Catalog({
         </Link>
       </div>
 
-      <ul className={styles.catalogList}>
-        <div className={styles.catalogItens} ref={scrollContainerRef}>
-          {producersToShow.map((producer) => (
-            <CatalogItem
-              key={producer.id}
-              producer={producer}
-              highlight={highlight}
-            />
-          ))}
-          {hasMore && <ViewMoreItem />}
-        </div>
+      <ul className={styles.catalogList} ref={scrollContainerRef}>
+        {producersToShow.map((producer) => (
+          <li key={producer.id} className={styles.catalogItem}>
+            <CatalogItem producer={producer} highlight={highlight} />
+          </li>
+        ))}
+        {hasMore && (
+          <li className={styles.catalogItem}>
+            <ViewMoreItem />
+          </li>
+        )}
       </ul>
 
       <RowControls
@@ -122,4 +129,4 @@ function Catalog({
   );
 }
 
-export default Catalog;
+export default ProductRow;

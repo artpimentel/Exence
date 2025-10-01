@@ -16,6 +16,7 @@ function Header() {
         <Link to="/">
           <img src={Logo} alt="" className={styles.logo} />
         </Link>
+
         <div className={styles.searchBar}>
           <input
             type="search"
@@ -26,6 +27,7 @@ function Header() {
             <IoSearchOutline />
           </button>
         </div>
+
         <div className={styles.headerButtons}>
           <button className={styles.button}>
             <IoNotificationsOutline />

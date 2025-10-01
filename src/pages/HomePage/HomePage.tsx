@@ -34,11 +34,6 @@ function Home2() {
         title="Top Exence"
         highlight={true}
       />
-      <ProductsRow
-        producers={producersYouLike}
-        title="Recomendadas para Você"
-      />
-      <ProductsRow producers={producersNearYou} title="Próximas de Você" />
     </>
   );
 }
