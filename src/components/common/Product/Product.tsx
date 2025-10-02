@@ -3,18 +3,17 @@ import { Link } from "react-router-dom";
 import styles from "./Product.module.css";
 import type { Producer } from "../../../types/Producer";
 
-interface CatalogItemProps {
+interface ProductProps {
   producer: Producer;
-  isActive?: boolean;
-  highlight?: boolean;
+  variant?: "row" | "highlight" | undefined;
 }
 
-function CatalogItem({ producer, isActive, highlight }: CatalogItemProps) {
+function Product({ producer, variant }: ProductProps) {
   return (
     <li
-      className={`${styles.catalogItem} ${isActive ? styles.active : ""} ${
-        highlight ? styles.highlight : ""
-      }`}
+      className={`${styles.product} 
+        ${variant === "highlight" ? styles.highlight : ""} 
+        ${variant === "row" ? styles.row : ""}`}
     >
       <Link to={`/product/${producer.id}`}>
         <img className={styles.producerImage} src={producer.images[0]} alt="" />
@@ -27,4 +26,4 @@ function CatalogItem({ producer, isActive, highlight }: CatalogItemProps) {
   );
 }
 
-export default CatalogItem;
+export default Product;

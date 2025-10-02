@@ -108,10 +108,13 @@ function ProductRow({
 
       <ul className={styles.catalogList} ref={scrollContainerRef}>
         {producersToShow.map((producer) => (
-          <li key={producer.id} className={styles.catalogItem}>
-            <CatalogItem producer={producer} highlight={highlight} />
-          </li>
+          <CatalogItem
+            key={producer.id}
+            producer={producer}
+            variant={highlight ? "highlight" : "row"}
+          />
         ))}
+
         {hasMore && (
           <li className={styles.catalogItem}>
             <ViewMoreItem />

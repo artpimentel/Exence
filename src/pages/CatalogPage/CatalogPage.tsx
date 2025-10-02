@@ -2,7 +2,7 @@ import { useState } from "react";
 import styles from "./CatalogPage.module.css";
 
 import ProductsCatalog from "../../components/ProductsCatalog/ProductsCatalog";
-import SideBar from "../../components/common/SideBar/SideBar";
+import FilterRow from "../../components/FilterRow/FilterRow.tsx";
 
 import type { Producer } from "../../types/Producer.ts";
 import allProducers from "../../data/producers.ts";
@@ -62,7 +62,7 @@ function Catalog() {
 
   return (
     <div className={styles.layout}>
-      <SideBar
+      <FilterRow
         filters={filterData}
         selectedFilters={selectedFilters}
         onToggleFilter={toggleFilter}
