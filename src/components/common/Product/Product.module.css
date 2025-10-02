@@ -1,10 +1,6 @@
 @import "../../../styles/variables.css";
 
 .product {
-  height: 100%;
-  aspect-ratio: 3 / 4;
-
-  border: 2px solid transparent;
   border-radius: 12px;
   box-shadow: 0 0 8px rgb(0, 0, 0, 0.75);
   overflow: hidden;
@@ -19,6 +15,14 @@
   transition: 0.25s ease-in-out;
 }
 
+.product.row,
+.product.highlight {
+  height: 100%;
+  aspect-ratio: 3 / 4;
+
+  border: 2px solid transparent;
+}
+
 .product.highlight {
   height: 300px;
 }
@@ -28,32 +32,39 @@
 }
 
 .product:hover {
-  transform: scale(1.05);
-  border: 2px solid var(--contrast-color);
+  transform: scale(1.01);
   box-shadow: 0 0 16px rgb(0, 0, 0, 0.75);
 
   transition: 0.25s ease-in-out;
 }
 
+.productLink {
+  text-decoration: none;
+}
+
 .producerImage {
-  background: #2f2f2f;
-  height: 100%;
   width: 100%;
+  aspect-ratio: 4 / 3;
 
   object-fit: cover;
+  object-position: top;
+}
+
+.producerImage.row .producerImage.highlight {
+  object-position: center;
 }
 
 .itemInfo {
-  background: rgba(0, 0, 0, 0.25);
-  backdrop-filter: blur(4px);
-  width: 100%;
-  padding: 16px 20px;
-
-  position: absolute;
-  transform: translateY(-100%);
+  padding: 16px;
 
   color: var(--contrast-color);
   font-family: sans-serif;
+}
+
+.infoHeader {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 4px;
 }
 
 .producerName {
@@ -63,8 +74,78 @@
   font-size: 16px;
 }
 
-.procuderLocality {
+.productLoc.hidden {
+  display: none;
+}
+
+.productLoc {
   opacity: 0.75;
 
   font-size: 12px;
+}
+
+.productDesc.hidden {
+  display: none;
+}
+
+.productDesc {
+  opacity: 0.75;
+
+  text-align: justify;
+  hyphens: auto;
+  word-wrap: break-word;
+
+  font-size: 12px;
+
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+
+.product.row:hover,
+.product.highlight:hover {
+  border: 2px solid var(--contrast-color);
+}
+
+.product.row .producerImage,
+.product.highlight .producerImage {
+  background: var(--complementary-color);
+  height: 100%;
+}
+
+.product.row .itemInfo,
+.product.highlight .itemInfo {
+  background: rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(4px);
+  width: 100%;
+
+  position: absolute;
+  transform: translateY(-100%);
+}
+
+.infoContent.hidden {
+  display: none;
+}
+
+.defaultInfo {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  gap: 4px;
+
+  opacity: 0.75;
+
+  text-align: justify;
+  hyphens: auto;
+  word-wrap: break-word;
+
+  font-size: 12px;
+}
+
+.defaultInfo span {
+  display: flex;
+  align-items: center;
+
+  font-size: 16px;
 }

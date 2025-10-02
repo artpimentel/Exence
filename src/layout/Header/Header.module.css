@@ -4,6 +4,8 @@
   height: 10vh;
   width: 100%;
 
+  box-shadow: 0 0 4px black;
+
   display: flex;
   justify-content: center;
 }
