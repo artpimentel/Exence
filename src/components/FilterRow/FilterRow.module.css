@@ -1,16 +1,11 @@
 .filterRow {
-  background: var(--complementary-color);
-  width: 100%;
   margin-top: 16px;
-  margin-bottom: 16px;
 
-  border-radius: 48px;
-  box-shadow: 0 0 4px black;
+  display: flex;
+  justify-content: center;
 }
 
 .layout {
-  padding: 8px 12px;
-
   display: flex;
   flex-flow: row nowrap;
   gap: 12px;
