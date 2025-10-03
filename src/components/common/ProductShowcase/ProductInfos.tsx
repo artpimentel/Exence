@@ -18,33 +18,33 @@ function ProductInfos({ producer, className }: ProductInfosProps) {
     <div className={`${styles.productInfo} ${className || ""}`}>
       <div className={styles.productHeader}>
         <h1 className={styles.productName}>
-          {producer.name} <span>{producer.locality}</span>
+          {producer.profile.name} <span>{producer.local.country}</span>
         </h1>
         <button className={styles.favoriteButton}>
           <FaRegHeart />
         </button>
       </div>
-      <p className={styles.productDesc}>{producer.description}</p>
+      <p className={styles.productDesc}>{producer.profile.description}</p>
       <div className={styles.contactsOptions}>
-        {producer.phone && (
+        {producer.contact.phone && (
           <a
-            href={`https://wa.me/${producer.phone}`}
+            href={`https://wa.me/${producer.contact.phone}`}
             className={`${styles.contactButton} ${styles.whatsapp}`}
           >
             <FaWhatsapp />
           </a>
         )}
-        {producer.telegram && (
+        {producer.contact.telegram && (
           <a
-            href={`https://t.me/${producer.telegram}`}
+            href={`https://t.me/${producer.contact.telegram}`}
             className={`${styles.contactButton} ${styles.telegram}`}
           >
             <FaTelegram />{" "}
           </a>
         )}
-        {producer.instagram && (
+        {producer.contact.instagram && (
           <a
-            href={`https://www.instagram.com/${producer.instagram}`}
+            href={`https://www.instagram.com/${producer.contact.instagram}`}
             className={`${styles.contactButton} ${styles.instagram}`}
           >
             <FaInstagram />

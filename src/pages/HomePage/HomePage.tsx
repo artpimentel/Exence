@@ -12,7 +12,7 @@ function Home2() {
   const producersCopy = [...allProducers];
 
   const newProducers = producersCopy.sort((a, b) => {
-    return b.createdAt.localeCompare(a.createdAt);
+    return b.metadata.createdAt.localeCompare(a.metadata.createdAt);
   });
 
   return (

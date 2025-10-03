@@ -1,30 +1,54 @@
-export interface Producer {
-  id: number;
-  createdAt: string;
-  gender: "male" | "female" | "femaletrans";
+import { type User } from "./User";
 
-  name: string;
-  description: string;
-  age: number;
-  nationality: string;
-  locality: string;
-  languages: { name: string; level: string }[];
+export interface Producer extends User {
+  metadata: User["metadata"] & {
+    verified: boolean;
+    reviewsCount?: number;
+    rating?: number;
+    tags?: string[];
+  };
 
-  email: string;
-  phone: string;
-  instagram?: string;
-  telegram?: string;
+  profile: User["profile"] & {
+    images: string[];
+    age: number;
+    nationality: string;
+    slogan: string;
+    description: string;
+    languages: {
+      name: string;
+      level: "Básico" | "Intermediário" | "Fluente";
+    }[];
+  };
 
   appearance: {
-    Cabelo: string;
-    Olhos: string;
-    Pele: string;
-    Seios: string;
+    Tatuagens: boolean;
+    Piercings: boolean;
+    Cabelo: "Loiro" | "Ruivo" | "Castanho Escuro" | "Castanho Claro" | "Preto";
+    Olhos: "Azuis" | "Verdes" | "Castanhos" | "Pretos";
+    Pele: "Branca" | "Parda" | "Morena" | "Preta";
+    Seios: "Pequenos" | "Médios" | "Grandes";
     Peso: number;
-    Altura: string;
+    Altura: number;
     Manequim: number;
     Pés: number;
   };
 
-  images: string[];
+  services: {
+    duration: string;
+    price: number;
+  }[];
+
+  local: {
+    country: string;
+    state: string;
+    city: string;
+    neighborhood: string;
+    hasLocal: boolean;
+  };
+
+  contact: {
+    phone: string;
+    instagram?: string;
+    telegram?: string;
+  };
 }
