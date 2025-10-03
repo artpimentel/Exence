@@ -34,7 +34,13 @@ export interface Producer extends User {
   };
 
   services: {
-    duration: string;
+    duration:
+      | "1 Hora"
+      | "2 Horas"
+      | "4 Horas"
+      | "Pernoite"
+      | "Diária"
+      | "30 Min";
     price: number;
   }[];
 

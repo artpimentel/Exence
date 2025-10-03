@@ -64,7 +64,6 @@
 .infoHeader {
   display: flex;
   flex-flow: column nowrap;
-  gap: 4px;
 }
 
 .producerName {
@@ -84,16 +83,17 @@
   font-size: 12px;
 }
 
-.productDesc.hidden {
+.productSlogan.hidden {
   display: none;
 }
 
-.productDesc {
+.productSlogan {
   opacity: 0.75;
 
   text-align: justify;
   hyphens: auto;
   word-wrap: break-word;
+  font-style: italic;
 
   font-size: 12px;
 
@@ -126,6 +126,82 @@
 
 .infoContent.hidden {
   display: none;
+}
+
+.valueDropdown {
+  padding: 8px 0;
+}
+
+.dropdownButton {
+  background: transparent;
+  padding: 0;
+
+  border: none;
+
+  display: flex;
+  flex-flow: column nowrap;
+
+  color: var(--contrast-color);
+  font-size: 12px;
+  text-align: left;
+
+  cursor: pointer;
+}
+
+.dropdownButton span {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  font-size: 16px;
+  font-weight: bold;
+  letter-spacing: -1px;
+}
+
+.dropdownMenu {
+  background: var(--complementary-color);
+
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 4px;
+
+  list-style: none;
+  margin: 0;
+  padding: 16px;
+  border-radius: 16px;
+  box-shadow: 0 0 4px black;
+
+  color: var(--contrast-color);
+  font-family: sans-serif;
+
+  cursor: default;
+}
+
+.dropdownItem span {
+  font-weight: bold;
+}
+
+.dropdownItem {
+  border-bottom: 1px solid var(--background-color);
+  padding-bottom: 4px;
+}
+
+.dropdownItem:last-child {
+  border-bottom: none;
+}
+
+.rating {
+  padding-bottom: 4px;
+
+  display: flex;
+  align-items: center;
+  gap: 4px;
+
+  text-decoration: underline;
+}
+
+.rating span {
+  font-size: 16px;
 }
 
 .defaultInfo {

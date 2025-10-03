@@ -9,7 +9,7 @@ const producers: Producer[] = [
       createdAt: "2025-07-05T14:30:00.000Z",
       lastLogin: "2025-09-30T10:00:00.000Z",
       email: "rubi@exemplo.com",
-      password: "mocked_password_hash_1", // Lembre-se de remover do User se for para o Front
+      password: "mocked_password_hash_1",
       status: "active",
       verified: true,
       reviewsCount: 15,
@@ -20,7 +20,7 @@ const producers: Producer[] = [
     profile: {
       name: "Rubi",
       gender: "female",
-      prefer: "male", // Assumindo um valor padrão
+      prefer: "male",
       images: [
         "https://veenaspa.com.br/wp-content/uploads/al_opt_content/IMAGE/veenaspa.com.br/wp-content/uploads/2025/08/ru-23.webp.bv.webp?bv_host=veenaspa.com.br",
         "https://veenaspa.com.br/wp-content/uploads/2025/08/ru-24.webp",
@@ -28,29 +28,28 @@ const producers: Producer[] = [
       ],
       age: 40,
       nationality: "Brasileira",
-      slogan: "A rainha dos traços marcantes.", // Adicionado
+      slogan: "A rainha dos traços marcantes.",
       description:
         "Com 40 anos, Rubi se destaca no Centro com seus traços marcantes. Possui Cabelo Preto, Olhos Verdes e Pele Preta. Sua silhueta é valorizada por Seios Grandes, manequim 36 e 55kg.",
       languages: [{ name: "Português", level: "Fluente" }],
     },
 
     appearance: {
-      Tatuagens: false, // Adicionado
-      Piercings: false, // Adicionado
+      Tatuagens: false,
+      Piercings: false,
       Cabelo: "Preto",
-      Olhos: "Verdes", // Padronizado para o tipo definido
+      Olhos: "Verdes",
       Pele: "Preta",
-      Seios: "Grandes", // Padronizado para o tipo definido
+      Seios: "Grandes",
       Peso: 55,
-      Altura: 1.7, // Usando formato numérico
+      Altura: 1.7,
       Manequim: 36,
       Pés: 37,
     },
 
     services: [
-      // Adicionado
-      { duration: "1 hora", price: 300 },
-      { duration: "2 horas", price: 550 },
+      { duration: "1 Hora", price: 300 },
+      { duration: "2 Horas", price: 550 },
     ],
 
     local: {
@@ -94,7 +93,7 @@ const producers: Producer[] = [
       ],
       age: 32,
       nationality: "Brasileira",
-      slogan: "Charme na Zona Sul.", // Adicionado
+      slogan: "Charme na Zona Sul.",
       description:
         "Laís, 32 anos, é uma presença charmosa na Zona Sul. Dona de Cabelos Pretos e Pele Morena, ela tem uma altura imponente e Seios Grandes. Veste manequim 38 e pesa 57kg.",
       languages: [{ name: "Português", level: "Fluente" }],
@@ -114,8 +113,8 @@ const producers: Producer[] = [
     },
 
     services: [
-      { duration: "1 hora", price: 400 },
-      { duration: "3 horas", price: 900 },
+      { duration: "1 Hora", price: 400 },
+      { duration: "4 Horas", price: 900 },
     ],
 
     local: {
@@ -159,7 +158,7 @@ const producers: Producer[] = [
       ],
       age: 28,
       nationality: "Brasileira",
-      slogan: "O charme discreto da Zona Norte.", // Adicionado
+      slogan: "O charme discreto da Zona Norte.",
       description:
         "Com 28 anos, Úrsula representa a Zona Norte. De Cabelos e Olhos Castanhos, ela tem Pele Branca e um porte mais baixo. Possui Seios Médios e veste o manequim 34, pesando 52kg.",
       languages: [{ name: "Português", level: "Fluente" }],
@@ -168,7 +167,7 @@ const producers: Producer[] = [
     appearance: {
       Tatuagens: false,
       Piercings: false,
-      Cabelo: "Castanho Escuro", // Ajustado para corresponder ao tipo
+      Cabelo: "Castanho Escuro",
       Olhos: "Castanhos",
       Pele: "Branca",
       Seios: "Médios",
@@ -179,8 +178,8 @@ const producers: Producer[] = [
     },
 
     services: [
-      { duration: "30 minutos", price: 200 },
-      { duration: "1 hora", price: 350 },
+      { duration: "30 Min", price: 200 },
+      { duration: "1 Hora", price: 350 },
     ],
 
     local: {
@@ -224,7 +223,7 @@ const producers: Producer[] = [
       ],
       age: 25,
       nationality: "Brasileira",
-      slogan: "Beleza e juventude na Zona Sul.", // Adicionado
+      slogan: "Beleza e juventude na Zona Sul.",
       description:
         "Vanessa, uma jovem de 25 anos na Zona Sul, é alta e de Pele Preta. Seus Cabelos e Olhos são Pretos, complementando seu visual. Tem Seios Pequenos e veste manequim 36 com 56kg.",
       languages: [{ name: "Português", level: "Fluente" }],
@@ -244,8 +243,8 @@ const producers: Producer[] = [
     },
 
     services: [
-      { duration: "1 hora", price: 350 },
-      { duration: "1.5 horas", price: 500 },
+      { duration: "1 Hora", price: 350 },
+      { duration: "2 Horas", price: 500 },
     ],
 
     local: {
@@ -289,7 +288,7 @@ const producers: Producer[] = [
       ],
       age: 30,
       nationality: "Brasileira",
-      slogan: "A Pérola da Zona Oeste.", // Adicionado
+      slogan: "A Pérola da Zona Oeste.",
       description:
         "Pérola, com 30 anos, atende na Zona Oeste. Ela tem Cabelos Loiros e Olhos Castanhos em contraste com sua Pele Branca. Apresenta Seios Grandes, tem 54kg e veste 36.",
       languages: [{ name: "Português", level: "Fluente" }],
@@ -309,8 +308,8 @@ const producers: Producer[] = [
     },
 
     services: [
-      { duration: "1 hora", price: 320 },
-      { duration: "2 horas", price: 600 },
+      { duration: "1 Hora", price: 320 },
+      { duration: "2 Horas", price: 600 },
     ],
 
     local: {
@@ -354,7 +353,7 @@ const producers: Producer[] = [
       ],
       age: 23,
       nationality: "Brasileira",
-      slogan: "Jovem, ruiva e cheia de arte.", // Adicionado
+      slogan: "Jovem, ruiva e cheia de arte.",
       description:
         "Clara, a mais nova da lista com 23 anos, atende na Zona Oeste. Possui Cabelos Ruivos e Pele Branca, com Olhos Pretos. É alta, tem Seios Pequenos e veste manequim 36.",
       languages: [{ name: "Português", level: "Fluente" }],
@@ -374,8 +373,8 @@ const producers: Producer[] = [
     },
 
     services: [
-      { duration: "1 hora", price: 380 },
-      { duration: "2 horas", price: 700 },
+      { duration: "1 Hora", price: 380 },
+      { duration: "2 Horas", price: 700 },
     ],
 
     local: {
@@ -401,7 +400,7 @@ const producers: Producer[] = [
       lastLogin: "2025-09-30T10:00:00.000Z",
       email: "jayni@exemplo.com",
       password: "mocked_password_hash_7",
-      status: "pendingApproval", // Exemplo de status diferente
+      status: "pendingApproval",
       verified: false,
       reviewsCount: 8,
       rating: 4.1,
@@ -419,7 +418,7 @@ const producers: Producer[] = [
       ],
       age: 32,
       nationality: "Brasileira",
-      slogan: "O olhar que hipnotiza na Zona Sul.", // Adicionado
+      slogan: "O olhar que hipnotiza na Zona Sul.",
       description:
         "Jayni, de 32 anos, atua na Zona Sul. Com Cabelos Castanhos e marcantes Olhos Azuis, possui Pele Branca e Seios Médios. É alta, veste manequim 34 e pesa 53kg.",
       languages: [{ name: "Português", level: "Fluente" }],
@@ -439,8 +438,8 @@ const producers: Producer[] = [
     },
 
     services: [
-      { duration: "1 hora", price: 340 },
-      { duration: "2 horas", price: 650 },
+      { duration: "1 Hora", price: 340 },
+      { duration: "2 Horas", price: 650 },
     ],
 
     local: {
