@@ -21,14 +21,14 @@ export interface Producer extends User {
   };
 
   appearance: {
-    Tatuagens: boolean;
-    Piercings: boolean;
+    Altura: number;
+    Peso: number;
+    Pele: "Branca" | "Parda" | "Morena" | "Preta";
     Cabelo: "Loiro" | "Ruivo" | "Castanho Escuro" | "Castanho Claro" | "Preto";
     Olhos: "Azuis" | "Verdes" | "Castanhos" | "Pretos";
-    Pele: "Branca" | "Parda" | "Morena" | "Preta";
     Seios: "Pequenos" | "Médios" | "Grandes";
-    Peso: number;
-    Altura: number;
+    Tatuagens: boolean;
+    Piercings: boolean;
     Manequim: number;
     Pés: number;
   };

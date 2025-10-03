@@ -18,10 +18,10 @@ function ProductPage() {
     return <p>Produto não encontrado</p>;
   }
 
-  const slides = producer.images.map((src, index) => ({
+  const slides = producer.profile.images.map((src, index) => ({
     id: index,
     src,
-    alt: `${producer.name} - imagem ${index + 1}`,
+    alt: `${producer.profile.name} - imagem ${index + 1}`,
   }));
 
   return (
