@@ -95,9 +95,9 @@ function FilterRow({
             {genderFilters.map((gender) => (
               <button
                 key={gender}
-                ref={(el: HTMLButtonElement | null) =>
-                  (buttonRefs.current[gender] = el)
-                }
+                ref={(el: HTMLButtonElement | null) => {
+                  buttonRefs.current[gender] = el;
+                }}
                 className={`${styles.genderButton} ${
                   selectedGender === gender ? styles.active : ""
                 }`}
