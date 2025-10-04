@@ -19,7 +19,7 @@ const producers: Producer[] = [
 
     profile: {
       name: "Rubi",
-      gender: "female",
+      gender: "femaletrans",
       prefer: "male",
       images: [
         "https://veenaspa.com.br/wp-content/uploads/al_opt_content/IMAGE/veenaspa.com.br/wp-content/uploads/2025/08/ru-23.webp.bv.webp?bv_host=veenaspa.com.br",
@@ -84,7 +84,7 @@ const producers: Producer[] = [
 
     profile: {
       name: "Laís",
-      gender: "female",
+      gender: "femaletrans",
       prefer: "male",
       images: [
         "https://veenaspa.com.br/wp-content/uploads/2025/08/lai-23.webp",

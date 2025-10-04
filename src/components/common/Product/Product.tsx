@@ -102,9 +102,7 @@ function Product({ producer, variant }: ProductProps) {
                 A partir de:
                 <span>
                   {producer.services?.[0]
-                    ? `R$ ${producer.services[0].price.toFixed(2)} - ${
-                        producer.services[0].duration
-                      }`
+                    ? `R$ ${producer.services[0].price} - ${producer.services[0].duration}`
                     : "Consultar"}
                   <IoIosArrowDown />
                 </span>

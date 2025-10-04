@@ -44,10 +44,7 @@ export interface Producer extends User {
     price: number;
   }[];
 
-  local: {
-    country: string;
-    state: string;
-    city: string;
+  local: User["local"] & {
     neighborhood: string;
     hasLocal: boolean;
   };

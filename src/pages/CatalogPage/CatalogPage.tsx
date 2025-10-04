@@ -7,6 +7,15 @@ import FilterRow from "../../components/FilterRow/FilterRow.tsx";
 import type { Producer } from "../../types/Producer.ts";
 import allProducers from "../../data/producers.ts";
 
+function getUniqueGenders(producers: Producer[]) {
+  const genders = new Set(
+    producers
+      .map((p) => p.profile.gender)
+      .filter((g): g is NonNullable<typeof g> => g !== undefined)
+  );
+  return Array.from(genders);
+}
+
 function getUniqueFilters(producers: Producer[]) {
   const filtersMap: { [key: string]: Set<string> } = {};
 
@@ -24,13 +33,22 @@ function getUniqueFilters(producers: Producer[]) {
     options: Array.from(optionsSet).sort(),
   }));
 }
+
 function Catalog() {
+  const userPreferredGender = "female";
+
   const filterData = getUniqueFilters(allProducers);
 
   const [selectedFilters, setSelectedFilters] = useState<
     Record<string, string[]>
   >({});
+  const [selectedGender, setSelectedGender] = useState<string | null>(null);
+  const rawGenderFilters = getUniqueGenders(allProducers);
 
+  const desiredGenderOrder = ["female", "male", "femaletrans"];
+  const genderFilters = rawGenderFilters.sort(
+    (a, b) => desiredGenderOrder.indexOf(a) - desiredGenderOrder.indexOf(b)
+  );
   function toggleFilter(category: string, option: string) {
     setSelectedFilters((prev) => {
       const prevOptions = prev[category] || [];
@@ -46,18 +64,24 @@ function Catalog() {
   }
 
   const filteredProducers = allProducers.filter((producer) => {
+    const matchesGender =
+      !selectedGender || producer.profile.gender === selectedGender;
+
     const noFiltersSelected = Object.values(selectedFilters).every(
       (opts) => opts.length === 0
     );
-    if (noFiltersSelected) return true;
+    if (noFiltersSelected && !selectedGender) return true;
 
-    return Object.entries(selectedFilters).every(([category, options]) => {
-      if (options.length === 0) return true;
+    const matchesOtherFilters = Object.entries(selectedFilters).every(
+      ([category, options]) => {
+        if (options.length === 0) return true;
+        const value =
+          producer.appearance[category as keyof typeof producer.appearance];
+        return options.includes(value.toString());
+      }
+    );
 
-      const value =
-        producer.appearance[category as keyof typeof producer.appearance];
-      return options.includes(value.toString());
-    });
+    return matchesGender && matchesOtherFilters;
   });
 
   return (
@@ -66,6 +90,10 @@ function Catalog() {
         filters={filterData}
         selectedFilters={selectedFilters}
         onToggleFilter={toggleFilter}
+        genderFilters={genderFilters}
+        selectedGender={selectedGender}
+        onSelectGender={setSelectedGender}
+        userPreferredGender={userPreferredGender}
       />
       <ProductsCatalog producers={filteredProducers} />
     </div>

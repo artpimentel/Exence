@@ -14,4 +14,9 @@ export interface User {
     gender?: "male" | "female" | "femaletrans";
     prefer?: "male" | "female" | "femaletrans";
   };
+  local: {
+    country: string;
+    state: string;
+    city: string;
+  };
 }

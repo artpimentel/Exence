@@ -33,7 +33,6 @@
 }
 
 .product:hover {
-  transform: scale(1.01);
   box-shadow: 0 0 16px rgb(0, 0, 0, 0.75);
 
   transition: 0.25s ease-in-out;
@@ -160,7 +159,7 @@
 }
 
 .dropdownMenu {
-  background: var(--complementary-color);
+  background: var(--background-color);
 
   display: flex;
   flex-flow: column nowrap;
