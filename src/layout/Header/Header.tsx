@@ -40,7 +40,7 @@ function Header() {
   return (
     <header className={styles.header}>
       <div className={styles.layout}>
-        <Link to="/">
+        <Link to="/home">
           <img src={Logo} alt="Logo" className={styles.logo} />
         </Link>
 

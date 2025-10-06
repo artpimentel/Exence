@@ -11,15 +11,15 @@ function AppRoutes() {
         path="/"
         element={
           <MainLayout>
-            <HomePage />
+            <CatalogPage />
           </MainLayout>
         }
       />
       <Route
-        path="/catalog"
+        path="/home"
         element={
           <MainLayout>
-            <CatalogPage />
+            <HomePage />
           </MainLayout>
         }
       />

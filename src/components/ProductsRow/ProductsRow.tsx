@@ -103,7 +103,7 @@ function ProductRow({
     >
       <div className={styles.rowHeader}>
         <span className={styles.catalogTitle}>{title}</span>
-        <Link to="/catalog" className={styles.headerButton}>
+        <Link to="/" className={styles.headerButton}>
           {t("seemorePlaceholder")}
         </Link>
       </div>
