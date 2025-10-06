@@ -1,3 +1,5 @@
+import { useState, useRef, useEffect } from "react";
+
 import styles from "./Header.module.css";
 
 import Logo from "../../../public/ExenceLogo.svg";
@@ -10,6 +12,25 @@ import {
 import { Link } from "react-router-dom";
 
 function Header() {
+  const [dropdownOpen, setDropdownOpen] = useState(false);
+  const dropdownRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    function handleClickOutside(event: MouseEvent) {
+      if (
+        dropdownRef.current &&
+        !dropdownRef.current.contains(event.target as Node)
+      ) {
+        setDropdownOpen(false);
+      }
+    }
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
+
   return (
     <header className={styles.header}>
       <div className={styles.layout}>
@@ -32,9 +53,25 @@ function Header() {
           <button className={styles.button}>
             <IoNotificationsOutline />
           </button>
-          <button className={styles.button}>
-            <IoPersonOutline />
-          </button>
+
+          <div className={styles.profileDropdown} ref={dropdownRef}>
+            <button
+              className={styles.button}
+              onClick={() => setDropdownOpen((prev) => !prev)}
+            >
+              <IoPersonOutline />
+            </button>
+            {dropdownOpen && (
+              <div className={styles.dropdownMenu}>
+                <Link to="/signin" className={styles.dropdownItem}>
+                  Log-In
+                </Link>
+                <Link to="/login" className={styles.dropdownItem}>
+                  Sign-In
+                </Link>
+              </div>
+            )}
+          </div>
         </div>
       </div>
     </header>

@@ -99,3 +99,22 @@
 
   cursor: pointer;
 }
+
+.profileDropdown {
+}
+
+.dropdownMenu {
+  background: var(--complementary-color);
+  padding: 8px;
+
+  justify-self: flex-end;
+  position: absolute;
+
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.dropdownItem {
+  color: var(--contrast-color);
+  text-decoration: none;
+}
