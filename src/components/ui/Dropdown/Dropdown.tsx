@@ -26,12 +26,9 @@ function Dropdown({ trigger, children }: DropdownProps) {
 
   return (
     <div className={styles.dropdown} ref={dropdownRef}>
-      <button
-        onClick={() => setOpen((prev) => !prev)}
-        className={styles.trigger}
-      >
+      <div onClick={() => setOpen((prev) => !prev)} className={styles.trigger}>
         {trigger}
-      </button>
+      </div>
       {open && <div className={styles.menu}>{children}</div>}
     </div>
   );
