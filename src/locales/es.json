@@ -1,4 +1,5 @@
 {
-  "welcome": "¡Bienvenido a nuestro sitio!",
-  "language": "Idioma"
+  "header": {
+    "searchPlaceholder": "Buscar..."
+  }
 }

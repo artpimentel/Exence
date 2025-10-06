@@ -1,8 +1,10 @@
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 
 import styles from "./Header.module.css";
 
+import Flag from "react-world-flags";
 import Logo from "../../../public/ExenceLogo.svg";
 import {
   IoSearchOutline,
@@ -15,11 +17,31 @@ import Dropdown from "../../components/ui/Dropdown/Dropdown";
 function Header() {
   const { t, i18n } = useTranslation();
 
+  const languages = [
+    { code: "pt", label: "Português", flagCode: "BR" },
+    { code: "en", label: "English", flagCode: "US" },
+    { code: "es", label: "Español", flagCode: "ES" },
+  ];
+
+  const [currentLang, setCurrentLang] = useState(
+    languages.find((l) => l.code === i18n.language) || languages[0]
+  );
+
+  useEffect(() => {
+    const lang = languages.find((l) => l.code === i18n.language);
+    if (lang) setCurrentLang(lang);
+  }, [i18n.language]);
+
+  const handleChangeLanguage = (lang: (typeof languages)[0]) => {
+    i18n.changeLanguage(lang.code);
+    setCurrentLang(lang);
+  };
+
   return (
     <header className={styles.header}>
       <div className={styles.layout}>
         <Link to="/">
-          <img src={Logo} alt="" className={styles.logo} />
+          <img src={Logo} alt="Logo" className={styles.logo} />
         </Link>
 
         <div className={styles.searchBar}>
@@ -33,19 +55,23 @@ function Header() {
           </button>
         </div>
 
-        <Dropdown trigger={<button>{t("language")} 🌐</button>}>
+        <Dropdown
+          trigger={
+            <button className={styles.languagesTrigger}>
+              <Flag className={styles.flagProp} code={currentLang.flagCode} />
+              {currentLang.label}
+            </button>
+          }
+        >
           <ul className={styles.languagesList}>
-            {[
-              { code: "pt", label: " Português" },
-              { code: "en", label: "🇺🇸 English" },
-              { code: "es", label: "🇪🇸 Español" },
-            ].map(({ code, label }) => (
+            {languages.map((lang) => (
               <li
+                key={lang.code}
                 className={styles.languageOption}
-                key={code}
-                onClick={() => i18n.changeLanguage(code)}
+                onClick={() => handleChangeLanguage(lang)}
               >
-                {label}
+                <Flag className={styles.flagProp} code={lang.flagCode} />
+                {lang.label}
               </li>
             ))}
           </ul>

@@ -1,6 +1,9 @@
 @import "../../../styles/variables.css";
 
 .dropdown {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
 }
 
 .trigger {
@@ -11,7 +14,7 @@
 
 .menu {
   background: var(--complementary-color);
-  margin-top: 4px;
+  margin-top: 40px;
   padding: 8px;
 
   border-radius: 8px;
