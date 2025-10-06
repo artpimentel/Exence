@@ -1,5 +1,5 @@
 {
-  "header": {
-    "searchPlaceholder": "Search..."
-  }
+  "searchPlaceholder": "Search...",
+  "seemorePlaceholder": "See More",
+  "newsPlaceholder": "News"
 }

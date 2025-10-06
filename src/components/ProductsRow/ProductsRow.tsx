@@ -1,5 +1,6 @@
 import { useRef, useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 import styles from "./ProductsRow.module.css";
 
@@ -28,6 +29,7 @@ function ProductRow({
   maxItems,
   highlight = false,
 }: ProductRowProps) {
+  const { t } = useTranslation();
   const scrollContainerRef = useRef<HTMLUListElement>(null);
 
   const [itemsPerPage, setItemsPerPage] = useState(0);
@@ -102,7 +104,7 @@ function ProductRow({
       <div className={styles.rowHeader}>
         <span className={styles.catalogTitle}>{title}</span>
         <Link to="/catalog" className={styles.headerButton}>
-          Veja mais
+          {t("seemorePlaceholder")}
         </Link>
       </div>
 

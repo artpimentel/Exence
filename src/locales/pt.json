@@ -1,5 +1,5 @@
 {
-  "header": {
-    "searchPlaceholder": "Buscar..."
-  }
+  "searchPlaceholder": "Buscar...",
+  "seemorePlaceholder": "Veja Mais",
+  "newsPlaceholder": "Novidades"
 }
