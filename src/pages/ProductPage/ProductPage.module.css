@@ -1,5 +1,13 @@
 @import "../../styles/variables.css";
 
+.productPage {
+  padding: 16px;
+
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 16px;
+}
+
 .productShowcase,
 .productSpecifies {
   width: 100%;
@@ -9,8 +17,6 @@
 
 .showcaseContent,
 .specifiesContent {
-  padding-inline: 16px;
-
   display: flex;
   flex-flow: row wrap;
   align-items: center;
@@ -18,7 +24,7 @@
 }
 
 .productSlider {
-  flex: 0 0 360px;
+  flex: 0 0 384px;
   max-width: 768px;
   aspect-ratio: 3 / 4;
 }

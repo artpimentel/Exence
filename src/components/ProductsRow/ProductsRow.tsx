@@ -6,8 +6,8 @@ import styles from "./ProductsRow.module.css";
 import { IoAddOutline } from "react-icons/io5";
 
 import type { Producer } from "../../types/Producer";
-import CatalogItem from "../common/Product/Product";
-import RowControls from "../common/RowControls/RowControls";
+import CatalogItem from "../Product/Product";
+import RowControls from "../ui/RowControls/RowControls";
 
 const ViewMoreItem = () => (
   <a className={styles.viewMoreItem} href="/ver-mais">

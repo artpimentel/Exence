@@ -45,8 +45,11 @@
 }
 
 .productDesc {
+  font-size: 16px;
+
   text-align: justify;
   hyphens: auto;
+  word-wrap: break-word;
 }
 
 .productName span {

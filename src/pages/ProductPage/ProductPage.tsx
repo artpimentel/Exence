@@ -6,7 +6,8 @@ import allProducers from "../../data/producers";
 import type { Producer } from "../../types/Producer";
 
 import Slider from "../../components/Slider/Slider";
-import ProductInfos from "../../components/common/ProductShowcase/ProductInfos";
+import ProductInfos from "../../components/ProductShowcase/ProductInfos";
+import ProductReviews from "../../components/ProductReviews/ProductReviews";
 
 function ProductPage() {
   const { id } = useParams<{ id: string }>();
@@ -25,7 +26,7 @@ function ProductPage() {
   }));
 
   return (
-    <>
+    <div className={styles.productPage}>
       <section className={styles.productShowcase}>
         <div className={styles.showcaseContent}>
           <Slider slides={slides} className={styles.productSlider} />
@@ -48,7 +49,9 @@ function ProductPage() {
           </div>
         </div>
       </section>
-    </>
+
+      <ProductReviews producer={producer} />
+    </div>
   );
 }
 

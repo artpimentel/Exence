@@ -1,6 +1,6 @@
 import styles from "./ProductsCatalog.module.css";
 import type { Producer } from "../../types/Producer.ts";
-import Product from "../../components/common/Product/Product.tsx";
+import Product from "../Product/Product.tsx";
 
 interface ProductsCatalogProps {
   producers: Producer[];
