@@ -1,4 +1,5 @@
-import { useState, useRef, useEffect } from "react";
+import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 import styles from "./Header.module.css";
 
@@ -9,27 +10,10 @@ import {
   IoPersonOutline,
 } from "react-icons/io5";
 
-import { Link } from "react-router-dom";
+import Dropdown from "../../components/ui/Dropdown/Dropdown";
 
 function Header() {
-  const [dropdownOpen, setDropdownOpen] = useState(false);
-  const dropdownRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    function handleClickOutside(event: MouseEvent) {
-      if (
-        dropdownRef.current &&
-        !dropdownRef.current.contains(event.target as Node)
-      ) {
-        setDropdownOpen(false);
-      }
-    }
-
-    document.addEventListener("mousedown", handleClickOutside);
-    return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
-    };
-  }, []);
+  const { t, i18n } = useTranslation();
 
   return (
     <header className={styles.header}>
@@ -41,7 +25,7 @@ function Header() {
         <div className={styles.searchBar}>
           <input
             type="search"
-            placeholder="Pesquisa..."
+            placeholder={t("searchPlaceholder")}
             className={styles.searchInput}
           />
           <button className={styles.searchButton}>
@@ -49,29 +33,45 @@ function Header() {
           </button>
         </div>
 
+        <Dropdown trigger={<button>{t("language")} 🌐</button>}>
+          <ul className={styles.languagesList}>
+            {[
+              { code: "pt", label: " Português" },
+              { code: "en", label: "🇺🇸 English" },
+              { code: "es", label: "🇪🇸 Español" },
+            ].map(({ code, label }) => (
+              <li
+                className={styles.languageOption}
+                key={code}
+                onClick={() => i18n.changeLanguage(code)}
+              >
+                {label}
+              </li>
+            ))}
+          </ul>
+        </Dropdown>
+
         <div className={styles.headerButtons}>
           <button className={styles.button}>
             <IoNotificationsOutline />
           </button>
 
-          <div className={styles.profileDropdown} ref={dropdownRef}>
-            <button
-              className={styles.button}
-              onClick={() => setDropdownOpen((prev) => !prev)}
-            >
-              <IoPersonOutline />
-            </button>
-            {dropdownOpen && (
-              <div className={styles.dropdownMenu}>
-                <Link to="/signin" className={styles.dropdownItem}>
-                  Log-In
-                </Link>
-                <Link to="/login" className={styles.dropdownItem}>
-                  Sign-In
-                </Link>
-              </div>
-            )}
-          </div>
+          <Dropdown
+            trigger={
+              <button className={styles.button}>
+                <IoPersonOutline />
+              </button>
+            }
+          >
+            <div className={styles.profileMenu}>
+              <Link to="/signin" className={styles.dropdownItem}>
+                Log-In
+              </Link>
+              <Link to="/login" className={styles.dropdownItem}>
+                Sign-In
+              </Link>
+            </div>
+          </Dropdown>
         </div>
       </div>
     </header>

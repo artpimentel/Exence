@@ -76,6 +76,20 @@
   cursor: pointer;
 }
 
+.languagesList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 4px;
+}
+
+.languageOption {
+  cursor: pointer;
+}
+
 .headerButtons {
   display: flex;
   flex-flow: row nowrap;
@@ -100,21 +114,7 @@
   cursor: pointer;
 }
 
-.profileDropdown {
-}
-
-.dropdownMenu {
-  background: var(--complementary-color);
-  padding: 8px;
-
-  justify-self: flex-end;
-  position: absolute;
-
+.profileMenu {
   display: flex;
   flex-flow: column nowrap;
-}
-
-.dropdownItem {
-  color: var(--contrast-color);
-  text-decoration: none;
 }
