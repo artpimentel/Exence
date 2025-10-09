@@ -51,9 +51,7 @@ function ProductInfo({ producer }: ProductInfosProps) {
       <div className={styles.content}>
         <div className={styles.productHeader}>
           <div className={styles.productHighlight}>
-            <h1 className={styles.productName}>
-              {producer.profile.name} <span>{producer.local.neighborhood}</span>
-            </h1>
+            <h1 className={styles.productName}>{producer.profile.name}</h1>
             <p className={styles.productSlogan}>"{producer.profile.slogan}"</p>
           </div>
           <button className={styles.favoriteButton}>
@@ -73,55 +71,52 @@ function ProductInfo({ producer }: ProductInfosProps) {
               <IoIosArrowDown />
             </div>
           </div>
-          <div className={styles.line}>
-            <div className={styles.infoCard}>
-              <div className={styles.cardHeader}>
-                <h2>
-                  <span>
-                    <TbCoinFilled />
-                  </span>
-                  Valores
-                </h2>
-                <IoIosArrowDown />
-              </div>
-              <ValueDropdown key={producer.id} producer={producer} />
+          <div className={styles.infoCard}>
+            <div className={styles.cardHeader}>
+              <h2>
+                <span>
+                  <TbCoinFilled />
+                </span>
+                Valores
+              </h2>
+              <IoIosArrowDown />
             </div>
-
-            <div className={styles.infoCard}>
-              <div className={styles.cardHeader}>
-                <h2>
-                  <span>
-                    <HiLocationMarker />
-                  </span>
-                  Localização
-                </h2>
-                <IoIosArrowDown />
-              </div>
-              <div className={styles.local}>
-                <strong className={styles.neighborhood}>
-                  {producer.local.neighborhood}
-                </strong>
-                <span className={styles.localExtra}>
-                  {producer.local.city} - {producer.local.state}
+            <ValueDropdown key={producer.id} producer={producer} />
+          </div>
+          <div className={styles.infoCard}>
+            <div className={styles.cardHeader}>
+              <h2>
+                <span>
+                  <HiLocationMarker />
                 </span>
-                <span className={styles.hasLocal}>
-                  {producer.local.hasLocal ? (
-                    <>
-                      <span>
-                        <TbHomeCheck />
-                      </span>
-                      com local
-                    </>
-                  ) : (
-                    <>
-                      <span>
-                        <TbHomeX />
-                      </span>
-                      sem local
-                    </>
-                  )}
-                </span>
-              </div>
+                Localização
+              </h2>
+              <IoIosArrowDown />
+            </div>
+            <div className={styles.local}>
+              <strong className={styles.neighborhood}>
+                {producer.local.neighborhood}
+              </strong>
+              <span className={styles.localExtra}>
+                {producer.local.city} - {producer.local.state}
+              </span>
+              <span className={styles.hasLocal}>
+                {producer.local.hasLocal ? (
+                  <>
+                    <span>
+                      <TbHomeCheck />
+                    </span>
+                    com local
+                  </>
+                ) : (
+                  <>
+                    <span>
+                      <TbHomeX />
+                    </span>
+                    sem local
+                  </>
+                )}
+              </span>
             </div>
           </div>
         </div>

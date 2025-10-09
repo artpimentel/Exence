@@ -4,7 +4,6 @@ const producers: Producer[] = [
   {
     id: 1,
     role: "advertiser",
-
     metadata: {
       createdAt: "2025-07-05T14:30:00.000Z",
       lastLogin: "2025-09-30T10:00:00.000Z",
@@ -16,7 +15,6 @@ const producers: Producer[] = [
       rating: 4.8,
       tags: ["Destaque", "Centro"],
     },
-
     profile: {
       name: "Rubi",
       gender: "femaletrans",
@@ -33,25 +31,53 @@ const producers: Producer[] = [
         "Com 40 anos, Rubi se destaca no Centro com seus traços marcantes. Possui Cabelo Preto, Olhos Verdes e Pele Preta. Sua silhueta é valorizada por Seios Grandes, manequim 36 e 55kg.",
       languages: [{ name: "Português", level: "Fluente" }],
     },
-
     appearance: {
-      Tatuagens: false,
-      Piercings: false,
+      Altura: 1.7,
+      Peso: 55,
+      Pele: "Preta",
       Cabelo: "Preto",
       Olhos: "Verdes",
-      Pele: "Preta",
       Seios: "Grandes",
-      Peso: 55,
-      Altura: 1.7,
+      Tatuagens: false,
+      Piercings: false,
       Manequim: 36,
       Pés: 37,
     },
-
-    services: [
+    prices: [
       { duration: "1 Hora", price: 300 },
       { duration: "2 Horas", price: 550 },
     ],
-
+    services: {
+      Companion: true,
+      Trip: false,
+      Kiss: true,
+      Masturbation: false,
+      OralSex: true,
+      AnalSex: false,
+      VaginalSex: true,
+      OralSexWithCondom: true,
+      AnalSexWithCondom: false,
+      VaginalSexWithCondom: true,
+      DoublePenetration: false,
+      TriplePenetration: false,
+      Squirt: false,
+      fetishes: {
+        Striptease: true,
+        Accessories: false,
+        Costume: false,
+        Podolatria: false,
+        Chirophilia: false,
+        Facefuck: false,
+        Voyer: false,
+        Bondage: false,
+        Domination: false,
+        Sadomasochism: false,
+        Trampling: false,
+        Fisting: false,
+        GoldenRain: false,
+        BrownRain: false,
+      },
+    },
     local: {
       country: "Brasil",
       state: "RJ",
@@ -59,17 +85,16 @@ const producers: Producer[] = [
       neighborhood: "Centro",
       hasLocal: true,
     },
-
     contact: {
       phone: "5521999998888",
       instagram: "rubioficial",
       telegram: undefined,
     },
   },
+
   {
     id: 2,
     role: "advertiser",
-
     metadata: {
       createdAt: "2025-09-28T10:05:00.000Z",
       lastLogin: "2025-09-30T10:00:00.000Z",
@@ -81,7 +106,6 @@ const producers: Producer[] = [
       rating: 5.0,
       tags: ["Zona Sul", "Elegante"],
     },
-
     profile: {
       name: "Laís",
       gender: "femaletrans",
@@ -98,25 +122,53 @@ const producers: Producer[] = [
         "Laís, 32 anos, é uma presença charmosa na Zona Sul. Dona de Cabelos Pretos e Pele Morena, ela tem uma altura imponente e Seios Grandes. Veste manequim 38 e pesa 57kg.",
       languages: [{ name: "Português", level: "Fluente" }],
     },
-
     appearance: {
-      Tatuagens: true,
-      Piercings: false,
+      Altura: 1.75,
+      Peso: 57,
+      Pele: "Morena",
       Cabelo: "Preto",
       Olhos: "Castanhos",
-      Pele: "Morena",
       Seios: "Grandes",
-      Peso: 57,
-      Altura: 1.75,
+      Tatuagens: true,
+      Piercings: false,
       Manequim: 38,
       Pés: 37,
     },
-
-    services: [
+    prices: [
       { duration: "1 Hora", price: 400 },
       { duration: "4 Horas", price: 900 },
     ],
-
+    services: {
+      Companion: true,
+      Trip: false,
+      Kiss: true,
+      Masturbation: false,
+      OralSex: true,
+      AnalSex: false,
+      VaginalSex: true,
+      OralSexWithCondom: true,
+      AnalSexWithCondom: false,
+      VaginalSexWithCondom: true,
+      DoublePenetration: false,
+      TriplePenetration: false,
+      Squirt: false,
+      fetishes: {
+        Striptease: true,
+        Accessories: false,
+        Costume: false,
+        Podolatria: false,
+        Chirophilia: false,
+        Facefuck: false,
+        Voyer: false,
+        Bondage: false,
+        Domination: false,
+        Sadomasochism: false,
+        Trampling: false,
+        Fisting: false,
+        GoldenRain: false,
+        BrownRain: false,
+      },
+    },
     local: {
       country: "Brasil",
       state: "RJ",
@@ -124,17 +176,16 @@ const producers: Producer[] = [
       neighborhood: "Zona-Sul",
       hasLocal: true,
     },
-
     contact: {
       phone: "5521988887777",
       instagram: "lais_model",
       telegram: undefined,
     },
   },
+
   {
     id: 3,
     role: "advertiser",
-
     metadata: {
       createdAt: "2025-08-15T18:10:00.000Z",
       lastLogin: "2025-09-29T15:00:00.000Z",
@@ -146,7 +197,6 @@ const producers: Producer[] = [
       rating: 4.2,
       tags: ["Novidade", "Discreta"],
     },
-
     profile: {
       name: "Úrsula",
       gender: "female",
@@ -163,25 +213,53 @@ const producers: Producer[] = [
         "Com 28 anos, Úrsula representa a Zona Norte. De Cabelos e Olhos Castanhos, ela tem Pele Branca e um porte mais baixo. Possui Seios Médios e veste o manequim 34, pesando 52kg.",
       languages: [{ name: "Português", level: "Fluente" }],
     },
-
     appearance: {
-      Tatuagens: false,
-      Piercings: false,
+      Altura: 1.6,
+      Peso: 52,
+      Pele: "Branca",
       Cabelo: "Castanho Escuro",
       Olhos: "Castanhos",
-      Pele: "Branca",
       Seios: "Médios",
-      Peso: 52,
-      Altura: 1.6,
+      Tatuagens: false,
+      Piercings: false,
       Manequim: 34,
       Pés: 36,
     },
-
-    services: [
+    prices: [
       { duration: "30 Min", price: 200 },
       { duration: "1 Hora", price: 350 },
     ],
-
+    services: {
+      Companion: true,
+      Trip: false,
+      Kiss: true,
+      Masturbation: false,
+      OralSex: true,
+      AnalSex: false,
+      VaginalSex: true,
+      OralSexWithCondom: true,
+      AnalSexWithCondom: false,
+      VaginalSexWithCondom: true,
+      DoublePenetration: false,
+      TriplePenetration: false,
+      Squirt: false,
+      fetishes: {
+        Striptease: true,
+        Accessories: false,
+        Costume: false,
+        Podolatria: false,
+        Chirophilia: false,
+        Facefuck: false,
+        Voyer: false,
+        Bondage: false,
+        Domination: false,
+        Sadomasochism: false,
+        Trampling: false,
+        Fisting: false,
+        GoldenRain: false,
+        BrownRain: false,
+      },
+    },
     local: {
       country: "Brasil",
       state: "RJ",
@@ -189,7 +267,6 @@ const producers: Producer[] = [
       neighborhood: "Zona-Norte",
       hasLocal: true,
     },
-
     contact: {
       phone: "5521977776666",
       instagram: undefined,
@@ -199,7 +276,6 @@ const producers: Producer[] = [
   {
     id: 4,
     role: "advertiser",
-
     metadata: {
       createdAt: "2025-09-02T09:15:00.000Z",
       lastLogin: "2025-09-30T10:00:00.000Z",
@@ -211,7 +287,6 @@ const producers: Producer[] = [
       rating: 4.5,
       tags: ["Zona Sul", "Jovem"],
     },
-
     profile: {
       name: "Vanessa",
       gender: "female",
@@ -228,25 +303,53 @@ const producers: Producer[] = [
         "Vanessa, uma jovem de 25 anos na Zona Sul, é alta e de Pele Preta. Seus Cabelos e Olhos são Pretos, complementando seu visual. Tem Seios Pequenos e veste manequim 36 com 56kg.",
       languages: [{ name: "Português", level: "Fluente" }],
     },
-
     appearance: {
-      Tatuagens: false,
-      Piercings: false,
+      Altura: 1.72,
+      Peso: 56,
+      Pele: "Preta",
       Cabelo: "Preto",
       Olhos: "Pretos",
-      Pele: "Preta",
       Seios: "Pequenos",
-      Peso: 56,
-      Altura: 1.72,
+      Tatuagens: false,
+      Piercings: false,
       Manequim: 36,
       Pés: 37,
     },
-
-    services: [
+    prices: [
       { duration: "1 Hora", price: 350 },
       { duration: "2 Horas", price: 500 },
     ],
-
+    services: {
+      Companion: true,
+      Trip: false,
+      Kiss: true,
+      Masturbation: false,
+      OralSex: true,
+      AnalSex: false,
+      VaginalSex: true,
+      OralSexWithCondom: true,
+      AnalSexWithCondom: false,
+      VaginalSexWithCondom: true,
+      DoublePenetration: false,
+      TriplePenetration: false,
+      Squirt: false,
+      fetishes: {
+        Striptease: true,
+        Accessories: false,
+        Costume: false,
+        Podolatria: false,
+        Chirophilia: false,
+        Facefuck: false,
+        Voyer: false,
+        Bondage: false,
+        Domination: false,
+        Sadomasochism: false,
+        Trampling: false,
+        Fisting: false,
+        GoldenRain: false,
+        BrownRain: false,
+      },
+    },
     local: {
       country: "Brasil",
       state: "RJ",
@@ -254,17 +357,16 @@ const producers: Producer[] = [
       neighborhood: "Zona-Sul",
       hasLocal: true,
     },
-
     contact: {
       phone: "5521966665555",
       instagram: "van_model",
       telegram: undefined,
     },
   },
+
   {
     id: 5,
     role: "advertiser",
-
     metadata: {
       createdAt: "2025-07-29T20:20:00.000Z",
       lastLogin: "2025-09-29T20:00:00.000Z",
@@ -276,7 +378,6 @@ const producers: Producer[] = [
       rating: 4.7,
       tags: ["Blonde", "Exótica"],
     },
-
     profile: {
       name: "Pérola",
       gender: "female",
@@ -293,25 +394,53 @@ const producers: Producer[] = [
         "Pérola, com 30 anos, atende na Zona Oeste. Ela tem Cabelos Loiros e Olhos Castanhos em contraste com sua Pele Branca. Apresenta Seios Grandes, tem 54kg e veste 36.",
       languages: [{ name: "Português", level: "Fluente" }],
     },
-
     appearance: {
-      Tatuagens: false,
-      Piercings: false,
+      Altura: 1.7,
+      Peso: 54,
+      Pele: "Branca",
       Cabelo: "Loiro",
       Olhos: "Castanhos",
-      Pele: "Branca",
       Seios: "Grandes",
-      Peso: 54,
-      Altura: 1.7,
+      Tatuagens: false,
+      Piercings: false,
       Manequim: 36,
       Pés: 36,
     },
-
-    services: [
+    prices: [
       { duration: "1 Hora", price: 320 },
       { duration: "2 Horas", price: 600 },
     ],
-
+    services: {
+      Companion: true,
+      Trip: false,
+      Kiss: true,
+      Masturbation: false,
+      OralSex: true,
+      AnalSex: false,
+      VaginalSex: true,
+      OralSexWithCondom: true,
+      AnalSexWithCondom: false,
+      VaginalSexWithCondom: true,
+      DoublePenetration: false,
+      TriplePenetration: false,
+      Squirt: false,
+      fetishes: {
+        Striptease: true,
+        Accessories: false,
+        Costume: false,
+        Podolatria: false,
+        Chirophilia: false,
+        Facefuck: false,
+        Voyer: false,
+        Bondage: false,
+        Domination: false,
+        Sadomasochism: false,
+        Trampling: false,
+        Fisting: false,
+        GoldenRain: false,
+        BrownRain: false,
+      },
+    },
     local: {
       country: "Brasil",
       state: "RJ",
@@ -319,17 +448,16 @@ const producers: Producer[] = [
       neighborhood: "Zona-Oeste",
       hasLocal: true,
     },
-
     contact: {
       phone: "5521955554444",
       instagram: "perola_real",
       telegram: undefined,
     },
   },
+
   {
     id: 6,
     role: "advertiser",
-
     metadata: {
       createdAt: "2025-09-10T12:25:00.000Z",
       lastLogin: "2025-09-30T09:00:00.000Z",
@@ -341,7 +469,6 @@ const producers: Producer[] = [
       rating: 4.9,
       tags: ["Ruiva", "Arte"],
     },
-
     profile: {
       name: "Clara",
       gender: "female",
@@ -358,25 +485,53 @@ const producers: Producer[] = [
         "Clara, a mais nova da lista com 23 anos, atende na Zona Oeste. Possui Cabelos Ruivos e Pele Branca, com Olhos Pretos. É alta, tem Seios Pequenos e veste manequim 36.",
       languages: [{ name: "Português", level: "Fluente" }],
     },
-
     appearance: {
-      Tatuagens: true,
-      Piercings: true,
+      Altura: 1.73,
+      Peso: 55,
+      Pele: "Branca",
       Cabelo: "Ruivo",
       Olhos: "Pretos",
-      Pele: "Branca",
       Seios: "Pequenos",
-      Peso: 55,
-      Altura: 1.73,
+      Tatuagens: true,
+      Piercings: true,
       Manequim: 36,
       Pés: 37,
     },
-
-    services: [
+    prices: [
       { duration: "1 Hora", price: 380 },
       { duration: "2 Horas", price: 700 },
     ],
-
+    services: {
+      Companion: true,
+      Trip: false,
+      Kiss: true,
+      Masturbation: false,
+      OralSex: true,
+      AnalSex: false,
+      VaginalSex: true,
+      OralSexWithCondom: true,
+      AnalSexWithCondom: false,
+      VaginalSexWithCondom: true,
+      DoublePenetration: false,
+      TriplePenetration: false,
+      Squirt: false,
+      fetishes: {
+        Striptease: true,
+        Accessories: false,
+        Costume: false,
+        Podolatria: false,
+        Chirophilia: false,
+        Facefuck: false,
+        Voyer: false,
+        Bondage: false,
+        Domination: false,
+        Sadomasochism: false,
+        Trampling: false,
+        Fisting: false,
+        GoldenRain: false,
+        BrownRain: false,
+      },
+    },
     local: {
       country: "Brasil",
       state: "RJ",
@@ -384,17 +539,16 @@ const producers: Producer[] = [
       neighborhood: "Zona-Oeste",
       hasLocal: true,
     },
-
     contact: {
       phone: "5521944443333",
       instagram: "clara_art",
       telegram: "clara_art",
     },
   },
+
   {
     id: 7,
     role: "advertiser",
-
     metadata: {
       createdAt: "2025-08-08T11:30:00.000Z",
       lastLogin: "2025-09-30T10:00:00.000Z",
@@ -406,7 +560,6 @@ const producers: Producer[] = [
       rating: 4.1,
       tags: ["Olhos Azuis", "Zona Sul"],
     },
-
     profile: {
       name: "Jayni",
       gender: "female",
@@ -423,25 +576,53 @@ const producers: Producer[] = [
         "Jayni, de 32 anos, atua na Zona Sul. Com Cabelos Castanhos e marcantes Olhos Azuis, possui Pele Branca e Seios Médios. É alta, veste manequim 34 e pesa 53kg.",
       languages: [{ name: "Português", level: "Fluente" }],
     },
-
     appearance: {
-      Tatuagens: false,
-      Piercings: false,
+      Altura: 1.71,
+      Peso: 53,
+      Pele: "Branca",
       Cabelo: "Castanho Escuro",
       Olhos: "Azuis",
-      Pele: "Branca",
       Seios: "Médios",
-      Peso: 53,
-      Altura: 1.71,
+      Tatuagens: false,
+      Piercings: false,
       Manequim: 34,
       Pés: 36,
     },
-
-    services: [
+    prices: [
       { duration: "1 Hora", price: 340 },
       { duration: "2 Horas", price: 650 },
     ],
-
+    services: {
+      Companion: true,
+      Trip: false,
+      Kiss: true,
+      Masturbation: false,
+      OralSex: true,
+      AnalSex: false,
+      VaginalSex: true,
+      OralSexWithCondom: true,
+      AnalSexWithCondom: false,
+      VaginalSexWithCondom: true,
+      DoublePenetration: false,
+      TriplePenetration: false,
+      Squirt: false,
+      fetishes: {
+        Striptease: true,
+        Accessories: false,
+        Costume: false,
+        Podolatria: false,
+        Chirophilia: false,
+        Facefuck: false,
+        Voyer: false,
+        Bondage: false,
+        Domination: false,
+        Sadomasochism: false,
+        Trampling: false,
+        Fisting: false,
+        GoldenRain: false,
+        BrownRain: false,
+      },
+    },
     local: {
       country: "Brasil",
       state: "RJ",
@@ -449,7 +630,6 @@ const producers: Producer[] = [
       neighborhood: "Zona-Sul",
       hasLocal: true,
     },
-
     contact: {
       phone: "5521933332222",
       instagram: undefined,

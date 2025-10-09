@@ -14,7 +14,7 @@ function ValueDropdown({ producer }: ValueDropdownProps) {
   const [open, setOpen] = useState(false);
 
   const [dropdownPos, setDropdownPos] = useState({ top: 0, left: 0 });
-  const values = producer.services || [];
+  const values = producer.prices || [];
 
   const buttonRef = useRef<HTMLButtonElement | null>(null);
   const dropdownRef = useRef<HTMLUListElement | null>(null);
@@ -61,8 +61,8 @@ function ValueDropdown({ producer }: ValueDropdownProps) {
       >
         A partir de:
         <span>
-          {producer.services?.[0]
-            ? `R$ ${producer.services[0].price} - ${producer.services[0].duration}`
+          {producer.prices?.[0]
+            ? `R$ ${producer.prices[0].price} - ${producer.prices[0].duration}`
             : "Consultar"}
           <IoIosArrowDown />
         </span>
