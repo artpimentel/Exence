@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import type { ReactNode } from "react";
 
-import styles from "./Dropdown.module.css";
+import styles from "./DropDown.module.css";
 
 interface DropdownProps {
   trigger: ReactNode;

@@ -16,26 +16,24 @@
 
   display: flex;
   flex-flow: row nowrap;
-  justify-content: space-between;
-  align-items: center;
+  align-items: end;
+  gap: 8px;
 
   align-self: center;
 }
 
 .catalogTitle {
   margin: 0;
-  padding-inline: 16px;
 
   color: var(--contrast-color);
-  font-size: 16px;
+  font-size: 20px;
   font-weight: bold;
 }
 
 .headerButton {
-  padding: 4px 8px;
-  margin-inline: 8px;
-
   border-radius: 16px;
+
+  opacity: 0.75;
 
   display: flex;
   align-items: center;
@@ -49,9 +47,7 @@
 }
 
 .headerButton:hover {
-  background: var(--primary-color);
-  box-shadow: 0 0 4px black;
-  color: var(--background-color);
+  color: var(--primary-color);
 
   transition: 0.25s ease-in-out;
 }
