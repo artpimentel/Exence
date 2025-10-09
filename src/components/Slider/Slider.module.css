@@ -1,7 +1,6 @@
 @import "../../styles/variables.css";
 
 .slider {
-  max-width: 960px;
   margin: 0 auto;
 
   display: flex;
@@ -10,6 +9,9 @@
 }
 
 .sliderContainer {
+  height: 100%;
+  width: 100%;
+
   border-radius: 16px;
   box-shadow: 0 0 8px rgb(0, 0, 0, 0.75);
   overflow: hidden;

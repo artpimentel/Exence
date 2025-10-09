@@ -1,0 +1,263 @@
+.productInfos {
+  background: var(--complementary-color);
+  flex: 1 1 auto;
+  height: calc(100% - 32px);
+
+  overflow: hidden;
+  border-radius: 16px;
+
+  position: relative;
+
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 8px;
+
+  color: var(--contrast-color);
+}
+
+.contactsOptions {
+  background: var(--complementary-color);
+  width: 100%;
+
+  box-shadow: 0 0 8px black;
+
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.contactsLayout {
+  padding: 16px;
+
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  gap: 12px;
+}
+
+.contactButton {
+  flex: 1 1 30%;
+  padding: 8px;
+
+  outline: none;
+  border: none;
+  border-radius: 8px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+
+  color: white;
+  font-size: 32px;
+  text-decoration: none;
+
+  cursor: pointer;
+}
+
+.contactButton span {
+  font-size: 12px;
+}
+
+.whatsapp {
+  background: #25d366;
+}
+
+.instagram {
+  background: #e1306c;
+}
+
+.telegram {
+  background: #0088cc;
+}
+
+.content {
+  min-height: 0;
+  padding: 16px;
+  overflow-y: auto;
+
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 16px;
+}
+
+.content::-webkit-scrollbar {
+  width: 6px;
+}
+
+.content::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.content::-webkit-scrollbar-thumb {
+  background: var(--background-color);
+  border: 2px solid var(--complementary-color);
+  border-radius: 5px;
+}
+
+.content::-webkit-scrollbar-thumb:hover {
+  background: var(--primary-color);
+}
+
+.productHeader {
+  width: 100%;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.productHighlight {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+}
+
+.productName {
+  margin: 0;
+}
+
+.productName span {
+  opacity: 75%;
+  font-size: 12px;
+}
+
+.productSlogan {
+  opacity: 0.75;
+  margin: 0;
+
+  font-size: 12px;
+  font-style: italic;
+}
+
+.favoriteButton {
+  background: transparent;
+  aspect-ratio: 1 / 1;
+
+  outline: none;
+  border: none;
+  border-radius: 50%;
+
+  font-size: 24px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: var(--contrast-color);
+
+  cursor: pointer;
+}
+
+.infoContent {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 8px;
+}
+
+.infoCard {
+  flex: 1 1 auto;
+  padding: 12px;
+
+  border-radius: 16px;
+  box-shadow: 0 0 0 1px var(--contrast-color);
+
+  position: relative;
+
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 16px;
+}
+
+.cardHeader {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.cardHeader h2 {
+  margin: 0;
+
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  gap: 4px;
+
+  font-size: 12px;
+  font-weight: normal;
+}
+
+.cardHeader span {
+  display: flex;
+  align-items: center;
+
+  font-size: 20px;
+}
+
+.line {
+  display: flex;
+  flex-flow: row wrap;
+  gap: 8px;
+}
+
+.local {
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.neighborhood {
+  font-size: 20px;
+}
+
+.localExtra {
+  opacity: 75%;
+  font-size: 12px;
+}
+
+.hasLocal {
+  opacity: 0.75;
+
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  gap: 2px;
+
+  font-size: 12px;
+}
+
+.hasLocal span {
+  display: flex;
+  align-items: center;
+}
+
+.productSpecifies {
+}
+
+.specifiesList {
+  flex: 0 0 360px;
+  max-width: 768px;
+
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  color: var(--contrast-color);
+}
+
+.specify {
+  padding: 12px;
+
+  border-bottom: 1px solid var(--contrast-color);
+  border-collapse: collapse;
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+@media (max-width: 768px) {
+  .productInfos {
+    overflow: visible;
+  }
+}

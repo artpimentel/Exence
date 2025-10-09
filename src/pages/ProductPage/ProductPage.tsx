@@ -6,8 +6,7 @@ import allProducers from "../../data/producers";
 import type { Producer } from "../../types/Producer";
 
 import Slider from "../../components/Slider/Slider";
-import ProductInfos from "../../components/ProductShowcase/ProductInfos";
-import ProductReviews from "../../components/ProductReviews/ProductReviews";
+import ProductInfo from "../../components/ProductCard/ProductInfo";
 
 function ProductPage() {
   const { id } = useParams<{ id: string }>();
@@ -27,30 +26,12 @@ function ProductPage() {
 
   return (
     <div className={styles.productPage}>
-      <section className={styles.productShowcase}>
-        <div className={styles.showcaseContent}>
+      <section className={styles.showcase}>
+        <div className={styles.layout}>
           <Slider slides={slides} className={styles.productSlider} />
-
-          <ProductInfos producer={producer} />
+          <ProductInfo producer={producer} />
         </div>
       </section>
-
-      <section className={styles.productSpecifies}>
-        <div className={styles.specifiesContent}>
-          <ul className={styles.specifiesList}>
-            {Object.entries(producer.appearance).map(([key, value]) => (
-              <li key={key} className={styles.specify}>
-                <strong>{key}:</strong> {value}
-              </li>
-            ))}
-          </ul>
-          <div className={styles.extraContent}>
-            <a href=""></a>
-          </div>
-        </div>
-      </section>
-
-      <ProductReviews producer={producer} />
     </div>
   );
 }

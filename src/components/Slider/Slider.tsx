@@ -62,9 +62,9 @@ function HighlightSlider({ slides, className }: HighlightSliderProps) {
   };
 
   return (
-    <section className={styles.slider}>
+    <section className={`${styles.slider} ${className || ""}`}>
       <div
-        className={`${styles.sliderContainer} ${className || ""}`}
+        className={styles.sliderContainer}
         onTouchStart={handleTouchStart}
         onTouchMove={handleTouchMove}
         onTouchEnd={handleTouchEnd}
