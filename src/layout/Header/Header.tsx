@@ -55,27 +55,17 @@ function Header() {
           </button>
         </div>
 
-        <Dropdown
-          trigger={
-            <button className={styles.languagesTrigger}>
-              <Flag className={styles.flagProp} code={currentLang.flagCode} />
-              {currentLang.label}
-            </button>
-          }
-        >
-          <ul className={styles.languagesList}>
-            {languages.map((lang) => (
-              <li
-                key={lang.code}
-                className={styles.languageOption}
-                onClick={() => handleChangeLanguage(lang)}
-              >
-                <Flag className={styles.flagProp} code={lang.flagCode} />
-                {lang.label}
-              </li>
-            ))}
-          </ul>
-        </Dropdown>
+        <div className={styles.langs}>
+          {languages.map((lang) => (
+            <i
+              key={lang.code}
+              className={styles.languageOption}
+              onClick={() => handleChangeLanguage(lang)}
+            >
+              <Flag className={styles.flagProp} code={lang.flagCode} />
+            </i>
+          ))}
+        </div>
 
         <div className={styles.headerButtons}>
           <button className={styles.button}>
