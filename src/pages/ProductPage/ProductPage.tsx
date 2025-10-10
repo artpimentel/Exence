@@ -8,6 +8,9 @@ import type { Producer } from "../../types/Producer";
 import Slider from "../../components/Slider/Slider";
 import ProductInfo from "../../components/ProductCard/ProductInfo";
 
+import { FaCheck, FaXmark } from "react-icons/fa6";
+import { IoIosArrowDown } from "react-icons/io";
+
 const formatServiceName = (name: string): string => {
   const serviceMap: { [key: string]: string } = {
     Companion: "Acompanhante",
@@ -17,9 +20,9 @@ const formatServiceName = (name: string): string => {
     OralSex: "Sexo Oral",
     AnalSex: "Sexo Anal",
     VaginalSex: "Sexo Vaginal",
-    OralSexWithCondom: "Sexo Oral c/ Camisinha",
-    AnalSexWithCondom: "Sexo Anal c/ Camisinha",
-    VaginalSexWithCondom: "Sexo Vaginal c/ Camisinha",
+    OralSexWithCondom: "Sexo Oral com Preservativo",
+    AnalSexWithCondom: "Sexo Anal com Preservativo",
+    VaginalSexWithCondom: "Sexo Vaginal com Preservativo",
     DoublePenetration: "Penetração Dupla",
     TriplePenetration: "Penetração Tripla",
     Squirt: "Squirt",
@@ -72,30 +75,32 @@ function ProductPage() {
         </div>
       </section>
       <section className={styles.productServices}>
-        <div className={styles.servicesY}>
+        <div className={`${styles.column} ${styles.servicesY}`}>
           <h2>Faço</h2>
-          {offeredServices.length > 0 ? (
-            <ul className={styles.servicesList}>
-              {offeredServices.map((serviceName) => (
-                <li key={serviceName}>{serviceName} ✅</li>
-              ))}
-            </ul>
-          ) : (
-            <p>Nenhum serviço oferecido listado.</p>
-          )}
+          <ul className={styles.servicesList}>
+            {offeredServices.map((serviceName) => (
+              <li key={serviceName}>
+                <span className={styles.green}>
+                  <FaCheck />
+                </span>
+                {serviceName}
+              </li>
+            ))}
+          </ul>
         </div>
 
-        <div className={styles.servicesN}>
+        <div className={`${styles.column} ${styles.servicesN}`}>
           <h2>Não faço</h2>
-          {notOfferedServices.length > 0 ? (
-            <ul className={styles.servicesList}>
-              {notOfferedServices.map((serviceName) => (
-                <li key={serviceName}>{serviceName} ❌</li>
-              ))}
-            </ul>
-          ) : (
-            <p>Todos os serviços estão listados acima ou indisponíveis.</p>
-          )}
+          <ul className={styles.servicesList}>
+            {notOfferedServices.map((serviceName) => (
+              <li key={serviceName}>
+                <span className={styles.red}>
+                  <FaXmark />
+                </span>
+                {serviceName}
+              </li>
+            ))}
+          </ul>
         </div>
       </section>
     </div>

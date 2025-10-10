@@ -1,7 +1,10 @@
 :root {
   --background-color: #1e1e1e;
-  --complementary-color: #2e2e2e;
+  --background-complementary-color: #2e2e2e;
+
   --contrast-color: #f7e7c7;
+  --contrast-complementary-color: rgba(247, 230, 197, 0.75);
+
   --primary-color: #ffd700;
-  --secundary-color: #ddb700;
+  --primary-complementary-color: rgba(221, 184, 0, 0.5);
 }
