@@ -43,6 +43,12 @@ export interface Producer extends User {
       | "30 Min";
     price: number;
   }[];
+  payments?: {
+    cash?: boolean;
+    pix?: boolean;
+    credit?: boolean;
+    debit?: boolean;
+  };
 
   services: {
     Companion: boolean;

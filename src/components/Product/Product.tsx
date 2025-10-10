@@ -7,7 +7,7 @@ import { TbHomeCheck, TbHomeX } from "react-icons/tb";
 import { FaHeart } from "react-icons/fa6";
 
 import type { Producer } from "../../types/Producer";
-import ValueDropdown from "../ui/ValueDropdown/ValueDrpdown";
+import ValueDropdown from "../ui/ValueDropdown/ValueDropdown";
 
 interface ProductProps {
   producer: Producer;

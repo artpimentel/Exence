@@ -46,7 +46,16 @@ const producers: Producer[] = [
     prices: [
       { duration: "1 Hora", price: 300 },
       { duration: "2 Horas", price: 550 },
+      { duration: "4 Horas", price: 1000 },
+      { duration: "Pernoite", price: 2500 },
+      { duration: "Diária", price: 3500 },
     ],
+    payments: {
+      cash: true,
+      pix: false,
+      credit: true,
+      debit: false,
+    },
     services: {
       Companion: true,
       Trip: false,
@@ -137,7 +146,16 @@ const producers: Producer[] = [
     prices: [
       { duration: "1 Hora", price: 400 },
       { duration: "4 Horas", price: 900 },
+      { duration: "2 Horas", price: 700 },
+      { duration: "Pernoite", price: 2200 },
+      { duration: "Diária", price: 3700 },
     ],
+    payments: {
+      cash: false,
+      pix: true,
+      credit: true,
+      debit: true,
+    },
     services: {
       Companion: true,
       Trip: false,
@@ -228,7 +246,16 @@ const producers: Producer[] = [
     prices: [
       { duration: "30 Min", price: 200 },
       { duration: "1 Hora", price: 350 },
+      { duration: "2 Horas", price: 600 },
+      { duration: "4 Horas", price: 1200 },
+      { duration: "Diária", price: 1800 },
     ],
+    payments: {
+      cash: true,
+      pix: true,
+      credit: false,
+      debit: true,
+    },
     services: {
       Companion: true,
       Trip: false,
@@ -318,7 +345,16 @@ const producers: Producer[] = [
     prices: [
       { duration: "1 Hora", price: 350 },
       { duration: "2 Horas", price: 500 },
+      { duration: "4 Horas", price: 950 },
+      { duration: "Pernoite", price: 2100 },
+      { duration: "Diária", price: 3200 },
     ],
+    payments: {
+      cash: false,
+      pix: true,
+      credit: true,
+      debit: false,
+    },
     services: {
       Companion: true,
       Trip: false,
@@ -409,7 +445,16 @@ const producers: Producer[] = [
     prices: [
       { duration: "1 Hora", price: 320 },
       { duration: "2 Horas", price: 600 },
+      { duration: "4 Horas", price: 1100 },
+      { duration: "Pernoite", price: 2000 },
+      { duration: "Diária", price: 2500 },
     ],
+    payments: {
+      cash: true,
+      pix: false,
+      credit: true,
+      debit: true,
+    },
     services: {
       Companion: true,
       Trip: false,
@@ -500,7 +545,16 @@ const producers: Producer[] = [
     prices: [
       { duration: "1 Hora", price: 380 },
       { duration: "2 Horas", price: 700 },
+      { duration: "4 Horas", price: 1200 },
+      { duration: "Pernoite", price: 2600 },
+      { duration: "Diária", price: 4000 },
     ],
+    payments: {
+      cash: false,
+      pix: true,
+      credit: false,
+      debit: true,
+    },
     services: {
       Companion: true,
       Trip: false,
@@ -591,7 +645,16 @@ const producers: Producer[] = [
     prices: [
       { duration: "1 Hora", price: 340 },
       { duration: "2 Horas", price: 650 },
+      { duration: "4 Horas", price: 900 },
+      { duration: "Pernoite", price: 1800 },
+      { duration: "Diária", price: 2200 },
     ],
+    payments: {
+      cash: true,
+      pix: true,
+      credit: true,
+      debit: false,
+    },
     services: {
       Companion: true,
       Trip: false,

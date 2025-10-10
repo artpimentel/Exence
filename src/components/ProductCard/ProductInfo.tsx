@@ -10,7 +10,7 @@ import { IoIosArrowDown } from "react-icons/io";
 import { FaWhatsapp, FaInstagram, FaTelegram } from "react-icons/fa6";
 
 import type { Producer } from "../../types/Producer";
-import ValueDropdown from "../ui/ValueDropdown/ValueDrpdown";
+import ValueDropdown from "../ui/ValueDropdown/ValueDropdown";
 
 interface ProductInfosProps {
   producer: Producer;
