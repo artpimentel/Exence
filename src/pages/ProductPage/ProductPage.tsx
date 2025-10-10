@@ -8,6 +8,9 @@ import type { Producer } from "../../types/Producer";
 import Slider from "../../components/Slider/Slider";
 import ProductInfo from "../../components/ProductCard/ProductInfo";
 import ProductServices from "../../components/ProductServices/ProductServices";
+import { IoMdSchool } from "react-icons/io";
+import { FaHandshake } from "react-icons/fa6";
+import { GoClockFill } from "react-icons/go";
 
 function ProductPage() {
   const { id } = useParams<{ id: string }>();
@@ -31,6 +34,28 @@ function ProductPage() {
         <div className={styles.layout}>
           <Slider slides={slides} className={styles.productSlider} />
           <ProductInfo producer={producer} />
+        </div>
+      </section>
+      <section className={styles.producerHistory}>
+        <h2>Sobre Mim</h2>
+        <p>"{producer.profile.description}"</p>
+        <div className={styles.topics}>
+          <div className={styles.topic}>
+            <i className={styles.icon}>
+              <IoMdSchool />
+            </i>
+          </div>
+          <div className={styles.topic}>
+            <i className={styles.icon}>
+              <FaHandshake />
+            </i>
+          </div>
+          <div className={styles.topic}>
+            <i className={styles.icon}>
+              <GoClockFill />
+            </i>
+            <div>Seg à Sex</div>
+          </div>
         </div>
       </section>
       <ProductServices producer={producer} />
