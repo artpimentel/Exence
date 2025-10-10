@@ -9,7 +9,7 @@ import allProducers from "../../data/producers";
 import type { Producer } from "../../types/Producer";
 
 import Slider from "../../components/Slider/Slider";
-import ProductInfo from "../../components/ProductCard/ProductInfo";
+import ProductInfo from "../../components/ProductInfo/ProductInfo";
 import ProductServices from "../../components/ProductServices/ProductServices";
 import ProductValues from "../../components/ProductValues/ProductValues";
 
