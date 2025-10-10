@@ -36,7 +36,7 @@ function Product({ producer, variant }: ProductProps) {
                 variant === undefined ? styles.hidden : ""
               }`}
             >
-              {producer.local.city}
+              {producer.locality.city}
             </span>
             <span
               className={`${styles.productSlogan} ${
@@ -68,7 +68,7 @@ function Product({ producer, variant }: ProductProps) {
               {producer.profile.age} anos
             </span>
             <span className={styles.defaultInfo}>
-              {producer.local.hasLocal ? (
+              {producer.locality.hasLocal ? (
                 <>
                   <span>
                     <TbHomeCheck />
@@ -88,7 +88,7 @@ function Product({ producer, variant }: ProductProps) {
               <span>
                 <GrLocation />
               </span>
-              {producer.local.city}, {producer.local.neighborhood}
+              {producer.locality.city}, {producer.locality.neighborhood}
             </span>
           </div>
         </div>

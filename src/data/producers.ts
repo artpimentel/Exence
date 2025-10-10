@@ -87,12 +87,30 @@ const producers: Producer[] = [
         BrownRain: false,
       },
     },
-    local: {
+    locality: {
       country: "Brasil",
       state: "RJ",
       city: "Rio de Janeiro",
       neighborhood: "Centro",
       hasLocal: true,
+      locations: {
+        athome: true,
+        hotels: true,
+        motels: false,
+        events: false,
+      },
+      local: {
+        state: "RJ",
+        city: "Rio de Janeiro",
+        neighborhood: "Centro",
+        amenities: {
+          wifi: true,
+          airconditioning: true,
+          shower: true,
+          condom: true,
+          parking: false,
+        },
+      },
     },
     contact: {
       phone: "5521999998888",
@@ -187,12 +205,30 @@ const producers: Producer[] = [
         BrownRain: false,
       },
     },
-    local: {
+    locality: {
       country: "Brasil",
       state: "RJ",
       city: "Rio de Janeiro",
       neighborhood: "Zona-Sul",
       hasLocal: true,
+      locations: {
+        athome: false,
+        hotels: true,
+        motels: true,
+        events: true,
+      },
+      local: {
+        state: "RJ",
+        city: "Rio de Janeiro",
+        neighborhood: "Zona-Sul",
+        amenities: {
+          wifi: true,
+          airconditioning: false,
+          shower: true,
+          condom: true,
+          parking: true,
+        },
+      },
     },
     contact: {
       phone: "5521988887777",
@@ -287,12 +323,30 @@ const producers: Producer[] = [
         BrownRain: false,
       },
     },
-    local: {
+    locality: {
       country: "Brasil",
       state: "RJ",
       city: "Rio de Janeiro",
       neighborhood: "Zona-Norte",
       hasLocal: true,
+      locations: {
+        athome: true,
+        hotels: false,
+        motels: true,
+        events: false,
+      },
+      local: {
+        state: "RJ",
+        city: "Rio de Janeiro",
+        neighborhood: "Zona-Norte",
+        amenities: {
+          wifi: false,
+          airconditioning: true,
+          shower: true,
+          condom: false,
+          parking: true,
+        },
+      },
     },
     contact: {
       phone: "5521977776666",
@@ -386,12 +440,30 @@ const producers: Producer[] = [
         BrownRain: false,
       },
     },
-    local: {
+    locality: {
       country: "Brasil",
       state: "RJ",
       city: "Rio de Janeiro",
       neighborhood: "Zona-Sul",
       hasLocal: true,
+      locations: {
+        athome: false,
+        hotels: true,
+        motels: false,
+        events: true,
+      },
+      local: {
+        state: "RJ",
+        city: "Rio de Janeiro",
+        neighborhood: "Zona-Sul",
+        amenities: {
+          wifi: true,
+          airconditioning: true,
+          shower: false,
+          condom: true,
+          parking: false,
+        },
+      },
     },
     contact: {
       phone: "5521966665555",
@@ -486,12 +558,30 @@ const producers: Producer[] = [
         BrownRain: false,
       },
     },
-    local: {
+    locality: {
       country: "Brasil",
       state: "RJ",
       city: "Rio de Janeiro",
       neighborhood: "Zona-Oeste",
       hasLocal: true,
+      locations: {
+        athome: true,
+        hotels: false,
+        motels: true,
+        events: true,
+      },
+      local: {
+        state: "RJ",
+        city: "Rio de Janeiro",
+        neighborhood: "Zona-Oeste",
+        amenities: {
+          wifi: false,
+          airconditioning: true,
+          shower: true,
+          condom: true,
+          parking: true,
+        },
+      },
     },
     contact: {
       phone: "5521955554444",
@@ -586,12 +676,30 @@ const producers: Producer[] = [
         BrownRain: false,
       },
     },
-    local: {
+    locality: {
       country: "Brasil",
       state: "RJ",
       city: "Rio de Janeiro",
       neighborhood: "Zona-Oeste",
       hasLocal: true,
+      locations: {
+        athome: false,
+        hotels: true,
+        motels: true,
+        events: false,
+      },
+      local: {
+        state: "RJ",
+        city: "Rio de Janeiro",
+        neighborhood: "Zona-Oeste",
+        amenities: {
+          wifi: true,
+          airconditioning: false,
+          shower: true,
+          condom: true,
+          parking: false,
+        },
+      },
     },
     contact: {
       phone: "5521944443333",
@@ -686,12 +794,30 @@ const producers: Producer[] = [
         BrownRain: false,
       },
     },
-    local: {
+    locality: {
       country: "Brasil",
       state: "RJ",
       city: "Rio de Janeiro",
       neighborhood: "Zona-Sul",
       hasLocal: true,
+      locations: {
+        athome: true,
+        hotels: true,
+        motels: false,
+        events: true,
+      },
+      local: {
+        state: "RJ",
+        city: "Rio de Janeiro",
+        neighborhood: "Zona-Sul",
+        amenities: {
+          wifi: true,
+          airconditioning: true,
+          shower: true,
+          condom: false,
+          parking: true,
+        },
+      },
     },
     contact: {
       phone: "5521933332222",

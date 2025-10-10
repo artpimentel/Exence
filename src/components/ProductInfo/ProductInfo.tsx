@@ -95,13 +95,13 @@ function ProductInfo({ producer }: ProductInfosProps) {
             </div>
             <div className={styles.local}>
               <strong className={styles.neighborhood}>
-                {producer.local.neighborhood}
+                {producer.locality.neighborhood}
               </strong>
               <span className={styles.localExtra}>
-                {producer.local.city} - {producer.local.state}
+                {producer.locality.city} - {producer.locality.state}
               </span>
               <span className={styles.hasLocal}>
-                {producer.local.hasLocal ? (
+                {producer.locality.hasLocal ? (
                   <>
                     <span>
                       <TbHomeCheck />

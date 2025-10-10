@@ -82,9 +82,27 @@ export interface Producer extends User {
     };
   };
 
-  local: User["local"] & {
+  locality: User["locality"] & {
     neighborhood: string;
+    locations: {
+      athome?: boolean;
+      hotels?: boolean;
+      motels?: boolean;
+      events?: boolean;
+    };
     hasLocal: boolean;
+    local: {
+      state: string;
+      city: string;
+      neighborhood: string;
+      amenities: {
+        wifi?: boolean;
+        airconditioning?: boolean;
+        shower?: boolean;
+        condom?: boolean;
+        parking?: boolean;
+      };
+    };
   };
 
   contact: {

@@ -12,6 +12,7 @@ import Slider from "../../components/Slider/Slider";
 import ProductInfo from "../../components/ProductInfo/ProductInfo";
 import ProductServices from "../../components/ProductServices/ProductServices";
 import ProductValues from "../../components/ProductValues/ProductValues";
+import ProductLocation from "../../components/ProductLocation/ProductLocation";
 
 function ProductPage() {
   const { id } = useParams<{ id: string }>();
@@ -61,6 +62,7 @@ function ProductPage() {
       </section>
       <ProductServices producer={producer} />
       <ProductValues producer={producer} />
+      <ProductLocation producer={producer} />
     </div>
   );
 }
