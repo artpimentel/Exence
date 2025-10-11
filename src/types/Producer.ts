@@ -1,6 +1,12 @@
 import { type User } from "./User";
+import { type ProducerAppearance } from "./ProducerAppearance";
+import { type ProducerPrice } from "./ProducerPrice";
+import { type ProducerReview } from "./ProducerReview";
+import { type ProducerServices } from "./ProducerServices";
 
 export interface Producer extends User {
+  role: "advertiser";
+
   metadata: User["metadata"] & {
     verified: boolean;
     reviewsCount?: number;
@@ -20,77 +26,30 @@ export interface Producer extends User {
     }[];
   };
 
-  appearance: {
-    Altura: number;
-    Peso: number;
-    Pele: "Branca" | "Parda" | "Morena" | "Preta";
-    Cabelo: "Loiro" | "Ruivo" | "Castanho Escuro" | "Castanho Claro" | "Preto";
-    Olhos: "Azuis" | "Verdes" | "Castanhos" | "Pretos";
-    Seios: "Pequenos" | "Médios" | "Grandes";
-    Tatuagens: boolean;
-    Piercings: boolean;
-    Manequim: number;
-    Pés: number;
-  };
+  appearance: ProducerAppearance;
 
-  prices: {
-    duration:
-      | "1 Hora"
-      | "2 Horas"
-      | "4 Horas"
-      | "Pernoite"
-      | "Diária"
-      | "30 Min";
-    price: number;
-  }[];
-  payments?: {
+  prices: ProducerPrice[];
+
+  payments: {
     cash?: boolean;
     pix?: boolean;
     credit?: boolean;
     debit?: boolean;
   };
 
-  services: {
-    Companion: boolean;
-    Trip: boolean;
-    Kiss: boolean;
-    Masturbation: boolean;
-    OralSex: boolean;
-    AnalSex: boolean;
-    VaginalSex: boolean;
-    OralSexWithCondom: boolean;
-    AnalSexWithCondom: boolean;
-    VaginalSexWithCondom: boolean;
-    DoublePenetration: boolean;
-    TriplePenetration: boolean;
-    Squirt: boolean;
-    fetishes: {
-      Striptease: boolean;
-      Accessories: boolean;
-      Costume: boolean;
-      Podolatria: boolean;
-      Chirophilia: boolean;
-      Facefuck: boolean;
-      Voyer: boolean;
-      Bondage: boolean;
-      Domination: boolean;
-      Sadomasochism: boolean;
-      Trampling: boolean;
-      Fisting: boolean;
-      GoldenRain: boolean;
-      BrownRain: boolean;
-    };
-  };
+  services: ProducerServices;
+
+  reviews?: ProducerReview[];
 
   locality: User["locality"] & {
     neighborhood: string;
+    hasLocal: boolean;
     locations: {
       athome?: boolean;
       hotels?: boolean;
       motels?: boolean;
       events?: boolean;
     };
-    hasLocal: boolean;
     local: {
       state: string;
       city: string;

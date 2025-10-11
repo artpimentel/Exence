@@ -1,4 +1,147 @@
 import type { Producer } from "../types/Producer";
+import type { ProducerReview } from "../types/ProducerReview"; // Importando a interface ProducerReview (assumindo a localização)
+
+// --- Dados Mock de Reviews (Baseado na sua estrutura) ---
+// Usaremos estes dados em 0, 2 ou 3 variações.
+
+// Reviews para produtor 1 (Rubi) - 3 reviews
+const reviewsRubi: ProducerReview[] = [
+  {
+    id: "rev_1a",
+    userId: "usr_101",
+    userName: "Júnior S.",
+    rating: 5,
+    comment:
+      "A Rubi é maravilhosa! Super profissional e atenciosa. Uma experiência de luxo no Centro.",
+    createdAt: "2025-09-25T12:00:00.000Z",
+  },
+  {
+    id: "rev_1b",
+    userId: "usr_102",
+    userName: "Marcos V.",
+    rating: 4,
+    comment:
+      "Tudo certo. Preço justo pela qualidade e descrição. Recomendo para quem busca traços marcantes.",
+    createdAt: "2025-09-20T18:30:00.000Z",
+  },
+  {
+    id: "rev_1c",
+    userId: "usr_103",
+    userName: undefined, // Exemplo de review sem userName
+    rating: 5,
+    comment: "Rainha dos traços, adorei!",
+    createdAt: "2025-09-18T10:15:00.000Z",
+  },
+];
+
+// Reviews para produtor 2 (Laís) - 2 reviews
+const reviewsLais: ProducerReview[] = [
+  {
+    id: "rev_2a",
+    userId: "usr_201",
+    userName: "Ricardo A.",
+    rating: 5,
+    comment:
+      "Elegância pura na Zona Sul. Atendimento nota 10, local com estacionamento. Voltarei!",
+    createdAt: "2025-09-29T11:45:00.000Z",
+  },
+  {
+    id: "rev_2b",
+    userId: "usr_202",
+    userName: "Pedro G.",
+    rating: 5,
+    comment:
+      "Laís é muito charmosa. Experiência discreta e completa. Recomendo muito.",
+    createdAt: "2025-09-27T20:10:00.000Z",
+  },
+];
+
+// Reviews para produtor 3 (Úrsula) - 0 reviews (Array vazio)
+const reviewsUrsula: ProducerReview[] = [];
+
+// Reviews para produtor 4 (Vanessa) - 3 reviews
+const reviewsVanessa: ProducerReview[] = [
+  {
+    id: "rev_4a",
+    userId: "usr_401",
+    userName: "Lucas F.",
+    rating: 4,
+    comment: "Jovem e bonita. O ar condicionado salvou o dia! 😉",
+    createdAt: "2025-09-26T14:30:00.000Z",
+  },
+  {
+    id: "rev_4b",
+    userId: "usr_402",
+    userName: "Carlos S.",
+    rating: 5,
+    comment: "Excelente. Superou as expectativas. Local limpo e agradável.",
+    createdAt: "2025-09-24T09:00:00.000Z",
+  },
+  {
+    id: "rev_4c",
+    userId: "usr_403",
+    userName: "Cliente Anônimo",
+    rating: 5,
+    comment: "Simplesmente incrível. Melhor da Zona Sul.",
+    createdAt: "2025-09-22T21:40:00.000Z",
+  },
+];
+
+// Reviews para produtor 5 (Pérola) - 2 reviews
+const reviewsPerola: ProducerReview[] = [
+  {
+    id: "rev_5a",
+    userId: "usr_501",
+    userName: "Gustavo B.",
+    rating: 4,
+    comment:
+      "Blonde muito exótica, como no anúncio. Tivemos que usar meu wifi, mas valeu a pena!",
+    createdAt: "2025-09-28T17:00:00.000Z",
+  },
+  {
+    id: "rev_5b",
+    userId: "usr_502",
+    userName: "Felipe K.",
+    rating: 5,
+    comment:
+      "A Pérola da Zona Oeste. Ótima recepção e local com tudo que é preciso.",
+    createdAt: "2025-09-21T13:10:00.000Z",
+  },
+];
+
+// Reviews para produtor 6 (Clara) - 3 reviews
+const reviewsClara: ProducerReview[] = [
+  {
+    id: "rev_6a",
+    userId: "usr_601",
+    userName: "Thiago P.",
+    rating: 5,
+    comment:
+      "Ruiva jovem e cheia de arte. Adorei a energia. Atendeu em um hotel tranquilo.",
+    createdAt: "2025-09-28T10:00:00.000Z",
+  },
+  {
+    id: "rev_6b",
+    userId: "usr_602",
+    userName: "Daniel R.",
+    rating: 5,
+    comment: "Profissionalismo impecável. As tatuagens dão um toque especial.",
+    createdAt: "2025-09-26T19:30:00.000Z",
+  },
+  {
+    id: "rev_6c",
+    userId: "usr_603",
+    userName: "Rodrigo L.",
+    rating: 4,
+    comment: "Tudo ótimo. O atendimento no motel foi discreto.",
+    createdAt: "2025-09-24T17:50:00.000Z",
+  },
+];
+
+// Reviews para produtor 7 (Jayni) - 0 reviews (Campo reviews não está presente)
+// O campo 'reviews' será omitido, simulando a ausência de reviews.
+
+// ----------------------------------------------------------------------------------
 
 const producers: Producer[] = [
   {
@@ -87,6 +230,7 @@ const producers: Producer[] = [
         BrownRain: false,
       },
     },
+    reviews: reviewsRubi, // 3 reviews
     locality: {
       country: "Brasil",
       state: "RJ",
@@ -205,6 +349,7 @@ const producers: Producer[] = [
         BrownRain: false,
       },
     },
+    reviews: reviewsLais, // 2 reviews
     locality: {
       country: "Brasil",
       state: "RJ",
@@ -323,6 +468,7 @@ const producers: Producer[] = [
         BrownRain: false,
       },
     },
+    reviews: reviewsUrsula, // 0 reviews (Array Vazio)
     locality: {
       country: "Brasil",
       state: "RJ",
@@ -354,6 +500,7 @@ const producers: Producer[] = [
       telegram: "ursula_oficial",
     },
   },
+
   {
     id: 4,
     role: "advertiser",
@@ -440,6 +587,7 @@ const producers: Producer[] = [
         BrownRain: false,
       },
     },
+    reviews: reviewsVanessa, // 3 reviews
     locality: {
       country: "Brasil",
       state: "RJ",
@@ -558,6 +706,7 @@ const producers: Producer[] = [
         BrownRain: false,
       },
     },
+    reviews: reviewsPerola, // 2 reviews
     locality: {
       country: "Brasil",
       state: "RJ",
@@ -676,6 +825,7 @@ const producers: Producer[] = [
         BrownRain: false,
       },
     },
+    reviews: reviewsClara, // 3 reviews
     locality: {
       country: "Brasil",
       state: "RJ",
@@ -794,6 +944,7 @@ const producers: Producer[] = [
         BrownRain: false,
       },
     },
+    // Sem o campo 'reviews', simulando a ausência de reviews.
     locality: {
       country: "Brasil",
       state: "RJ",
