@@ -1,4 +1,3 @@
-import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 
@@ -23,18 +22,8 @@ function Header() {
     { code: "es", label: "Español", flagCode: "ES" },
   ];
 
-  const [currentLang, setCurrentLang] = useState(
-    languages.find((l) => l.code === i18n.language) || languages[0]
-  );
-
-  useEffect(() => {
-    const lang = languages.find((l) => l.code === i18n.language);
-    if (lang) setCurrentLang(lang);
-  }, [i18n.language]);
-
   const handleChangeLanguage = (lang: (typeof languages)[0]) => {
     i18n.changeLanguage(lang.code);
-    setCurrentLang(lang);
   };
 
   return (
