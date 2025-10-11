@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 import styles from "./ProductInfo.module.css";
 import { FaRegHeart } from "react-icons/fa6";
 
@@ -60,7 +62,7 @@ function ProductInfo({ producer }: ProductInfosProps) {
         </div>
 
         <div className={styles.infoContent}>
-          <div className={styles.infoCard}>
+          <Link to="#reviews" className={styles.infoCard}>
             <div className={styles.cardHeader}>
               <h2>
                 <span>
@@ -70,8 +72,8 @@ function ProductInfo({ producer }: ProductInfosProps) {
               </h2>
               <IoIosArrowDown />
             </div>
-          </div>
-          <div className={styles.infoCard}>
+          </Link>
+          <Link to="#values" className={styles.infoCard}>
             <div className={styles.cardHeader}>
               <h2>
                 <span>
@@ -82,8 +84,8 @@ function ProductInfo({ producer }: ProductInfosProps) {
               <IoIosArrowDown />
             </div>
             <ValueDropdown key={producer.id} producer={producer} />
-          </div>
-          <div className={styles.infoCard}>
+          </Link>
+          <Link to="#location" className={styles.infoCard}>
             <div className={styles.cardHeader}>
               <h2>
                 <span>
@@ -118,7 +120,7 @@ function ProductInfo({ producer }: ProductInfosProps) {
                 )}
               </span>
             </div>
-          </div>
+          </Link>
         </div>
 
         <div className={styles.productSpecifies}>

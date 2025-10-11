@@ -164,6 +164,9 @@
   flex-flow: column nowrap;
   gap: 8px;
 
+  color: var(--contrast-color);
+  text-decoration: none;
+
   cursor: pointer;
 }
 

@@ -1,5 +1,5 @@
-// ProductPage.tsx
-import { useParams } from "react-router-dom";
+import { useParams, useLocation } from "react-router-dom";
+import { useEffect } from "react";
 import styles from "./ProductPage.module.css";
 
 import { IoMdSchool } from "react-icons/io";
@@ -18,6 +18,8 @@ import ProductReviews from "../../components/ProductReviews/ProductReviews";
 
 function ProductPage() {
   const { id } = useParams<{ id: string }>();
+  const { hash } = useLocation();
+
   const producer: Producer | undefined = allProducers.find(
     (p) => p.id.toString() === id
   );
@@ -25,6 +27,21 @@ function ProductPage() {
   if (!producer) {
     return <p>Produto não encontrado</p>;
   }
+
+  useEffect(() => {
+    if (hash) {
+      const targetId = hash.substring(1);
+
+      const element = document.getElementById(targetId);
+
+      if (element) {
+        element.scrollIntoView({
+          behavior: "smooth",
+          block: "center",
+        });
+      }
+    }
+  }, [hash]);
 
   const slides = producer.profile.images.map((src, index) => ({
     id: index,

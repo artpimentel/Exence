@@ -11,7 +11,7 @@ interface ProductLocationProps {
 
 function ProductLocation({ producer }: ProductLocationProps) {
   return (
-    <section className={styles.productLocation}>
+    <section id="location" className={styles.productLocation}>
       <div className={styles.layout}>
         <div className={styles.header}>
           <h2 className={styles.title}>

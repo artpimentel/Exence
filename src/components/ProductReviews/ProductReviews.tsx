@@ -14,7 +14,7 @@ function ProductReviews({ producer }: ProductReviewsProps) {
   const hasReviews = reviews && reviews.length > 0;
 
   return (
-    <section className={styles.productReviews}>
+    <section id="reviews" className={styles.productReviews}>
       <div className={styles.layout}>
         <div className={styles.header}>
           <h2>{producer.metadata.reviewsCount || 0} Avaliações</h2>

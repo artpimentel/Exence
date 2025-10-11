@@ -13,7 +13,7 @@ function ProductValues({ producer }: ProductValuesProps) {
   const payments = producer?.payments ?? {};
 
   return (
-    <section className={styles.producerValues}>
+    <section id="values" className={styles.producerValues}>
       <div className={styles.layout}>
         <div className={styles.header}>
           <h2>
