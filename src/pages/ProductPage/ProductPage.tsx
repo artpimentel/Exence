@@ -1,6 +1,7 @@
 // ProductPage.tsx
 import { useParams } from "react-router-dom";
 import styles from "./ProductPage.module.css";
+
 import { IoMdSchool } from "react-icons/io";
 import { FaHandshake } from "react-icons/fa6";
 import { GoClockFill } from "react-icons/go";
@@ -13,6 +14,7 @@ import ProductInfo from "../../components/ProductInfo/ProductInfo";
 import ProductServices from "../../components/ProductServices/ProductServices";
 import ProductValues from "../../components/ProductValues/ProductValues";
 import ProductLocation from "../../components/ProductLocation/ProductLocation";
+import ProductReviews from "../../components/ProductReviews/ProductReviews";
 
 function ProductPage() {
   const { id } = useParams<{ id: string }>();
@@ -63,6 +65,7 @@ function ProductPage() {
       <ProductServices producer={producer} />
       <ProductValues producer={producer} />
       <ProductLocation producer={producer} />
+      <ProductReviews producer={producer} />
     </div>
   );
 }

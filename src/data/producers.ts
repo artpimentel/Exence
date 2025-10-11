@@ -1,10 +1,6 @@
 import type { Producer } from "../types/Producer";
-import type { ProducerReview } from "../types/ProducerReview"; // Importando a interface ProducerReview (assumindo a localização)
+import type { ProducerReview } from "../types/ProducerReview";
 
-// --- Dados Mock de Reviews (Baseado na sua estrutura) ---
-// Usaremos estes dados em 0, 2 ou 3 variações.
-
-// Reviews para produtor 1 (Rubi) - 3 reviews
 const reviewsRubi: ProducerReview[] = [
   {
     id: "rev_1a",
@@ -27,7 +23,7 @@ const reviewsRubi: ProducerReview[] = [
   {
     id: "rev_1c",
     userId: "usr_103",
-    userName: undefined, // Exemplo de review sem userName
+    userName: undefined,
     rating: 5,
     comment: "Rainha dos traços, adorei!",
     createdAt: "2025-09-18T10:15:00.000Z",
@@ -137,11 +133,6 @@ const reviewsClara: ProducerReview[] = [
     createdAt: "2025-09-24T17:50:00.000Z",
   },
 ];
-
-// Reviews para produtor 7 (Jayni) - 0 reviews (Campo reviews não está presente)
-// O campo 'reviews' será omitido, simulando a ausência de reviews.
-
-// ----------------------------------------------------------------------------------
 
 const producers: Producer[] = [
   {
@@ -825,7 +816,7 @@ const producers: Producer[] = [
         BrownRain: false,
       },
     },
-    reviews: reviewsClara, // 3 reviews
+    reviews: reviewsClara,
     locality: {
       country: "Brasil",
       state: "RJ",
@@ -944,7 +935,6 @@ const producers: Producer[] = [
         BrownRain: false,
       },
     },
-    // Sem o campo 'reviews', simulando a ausência de reviews.
     locality: {
       country: "Brasil",
       state: "RJ",
