@@ -7,7 +7,6 @@ import StartPopup from "./components/StartPopup/StartPopup";
 import { ScrollTop } from "./utils/ScrollTop";
 
 function App() {
-  const [showPopup, setShowPopup] = useState(false);
   const [hasConfirmedAge, setHasConfirmedAge] = useState(false);
 
   useEffect(() => {
@@ -15,18 +14,14 @@ function App() {
 
     if (ageConfirmed === "true") {
       setHasConfirmedAge(true);
-    } else {
-      setShowPopup(true);
     }
   }, []);
 
   const handleConfirmAge = () => {
-    setShowPopup(false);
     setHasConfirmedAge(true);
   };
 
   const handleExitSite = () => {
-    setShowPopup(false);
     window.location.href = "https://www.google.com";
   };
 
