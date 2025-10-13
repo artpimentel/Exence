@@ -1,13 +1,9 @@
-@import "../../styles/variables.css";
-
 .ProducersCatalog {
   width: 100%;
 
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
-
-  font-family: sans-serif;
 }
 
 .rowHeader {

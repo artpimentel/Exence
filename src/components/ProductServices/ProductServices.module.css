@@ -9,7 +9,6 @@
   grid-template-columns: 1fr 1fr;
 
   color: var(--contrast-color);
-  font-family: sans-serif;
 }
 
 .productServices::before {

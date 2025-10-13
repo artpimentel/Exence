@@ -1,12 +1,9 @@
-@import "../../styles/variables.css";
-
 .layout {
   height: 100%;
 }
 
 .noResults {
   color: var(--contrast-color);
-  font-family: sans-serif;
 
   display: flex;
   justify-content: center;

@@ -1,5 +1,3 @@
-@import "../../styles/variables.css";
-
 .product {
   background: var(--complementary-color);
   border-radius: 12px;
@@ -58,7 +56,6 @@
   padding: 16px;
 
   color: var(--contrast-color);
-  font-family: sans-serif;
 }
 
 .infoHeader {
