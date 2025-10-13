@@ -1,7 +1,7 @@
 .productInfos {
   background: var(--background-complementary-color);
   flex: 1 1 auto;
-  height: calc(100% - 32px);
+  height: calc(90vh - 32px);
 
   overflow: hidden;
   border-radius: 16px;
@@ -156,7 +156,7 @@
   padding: 12px;
 
   border-radius: 8px;
-  box-shadow: 0 0 0 1px var(--contrast-complementary-color);
+  box-shadow: 0 0 0 1px var(--primary-complementary-color);
 
   position: relative;
 
@@ -175,6 +175,8 @@
   flex-flow: row nowrap;
   align-items: center;
   justify-content: space-between;
+
+  color: var(--primary-color);
 }
 
 .cardHeader h2 {
@@ -224,6 +226,22 @@
 .hasLocal span {
   display: flex;
   align-items: center;
+}
+
+.seeMoreButton {
+  background: var(--primary-color);
+  width: 100%;
+  padding: 4px;
+
+  outline: none;
+  border: none;
+  border-radius: 12px;
+
+  color: var(--background-color);
+  font-size: 12px;
+  font-weight: bold;
+
+  cursor: pointer;
 }
 
 .productSpecifies {

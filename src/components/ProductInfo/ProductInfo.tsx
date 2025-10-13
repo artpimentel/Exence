@@ -68,7 +68,7 @@ function ProductInfo({ producer }: ProductInfosProps) {
                 <span>
                   <FaHeart />
                 </span>
-                Avaliações
+                {producer.reviews?.length} Avaliações
               </h2>
               <IoIosArrowDown />
             </div>
@@ -122,6 +122,8 @@ function ProductInfo({ producer }: ProductInfosProps) {
             </div>
           </Link>
         </div>
+
+        <button className={styles.seeMoreButton}>Veja Mais</button>
 
         <div className={styles.productSpecifies}>
           <ul className={styles.specifiesList}>
