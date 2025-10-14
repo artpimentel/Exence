@@ -17,7 +17,7 @@ function ProductReviews({ producer }: ProductReviewsProps) {
     <section id="reviews" className={styles.productReviews}>
       <div className={styles.layout}>
         <div className={styles.header}>
-          <h2>{producer.metadata.reviewsCount || 0} Avaliações</h2>
+          <h2>{producer.reviews?.length} Avaliações</h2>
           <span className={styles.ratingValue}>
             <span>
               <FaHeart />

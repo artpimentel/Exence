@@ -1,11 +1,12 @@
+import { useRef, useState, useEffect } from "react";
 import styles from "./ProductInfo.module.css";
 
-import { FaRegHeart } from "react-icons/fa6";
+import { IoEyeOutline } from "react-icons/io5";
 import { TbCoinFilled } from "react-icons/tb";
 import { HiLocationMarker } from "react-icons/hi";
 import { TbHomeCheck, TbHomeX } from "react-icons/tb";
 import { FaHeart } from "react-icons/fa6";
-import { IoIosArrowDown } from "react-icons/io";
+import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
 
 import { FaWhatsapp, FaInstagram, FaTelegram } from "react-icons/fa6";
 
@@ -18,6 +19,33 @@ interface ProductInfosProps {
 }
 
 function ProductInfo({ producer }: ProductInfosProps) {
+  const contentRef = useRef<HTMLDivElement | null>(null);
+  const [atBottom, setAtBottom] = useState(false);
+
+  useEffect(() => {
+    const el = contentRef.current;
+    if (!el) return;
+
+    const handleScroll = () => {
+      const halfway = el.clientHeight / 2;
+      setAtBottom(el.scrollTop > halfway);
+    };
+
+    el.addEventListener("scroll", handleScroll);
+    return () => el.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  const handleSeeMore = () => {
+    const el = contentRef.current;
+    if (!el) return;
+
+    if (atBottom) {
+      el.scrollTo({ top: 0, behavior: "smooth" });
+    } else {
+      el.scrollTo({ top: el.clientHeight - 44, behavior: "smooth" });
+    }
+  };
+
   return (
     <div className={styles.productInfos}>
       <div className={styles.contactsOptions}>
@@ -49,18 +77,20 @@ function ProductInfo({ producer }: ProductInfosProps) {
         </div>
       </div>
 
-      <div className={styles.content}>
-        <div className={styles.productHeader}>
-          <div className={styles.productHighlight}>
-            <h1 className={styles.productName}>{producer.profile.name}</h1>
-            <p className={styles.productSlogan}>"{producer.profile.slogan}"</p>
-          </div>
-          <button className={styles.favoriteButton}>
-            <FaRegHeart />
-          </button>
-        </div>
-
+      <div className={styles.content} ref={contentRef}>
         <div className={styles.infoContent}>
+          <div className={styles.productHeader}>
+            <div className={styles.productHighlight}>
+              <h1 className={styles.productName}>{producer.profile.name}</h1>
+              <p className={styles.productSlogan}>
+                "{producer.profile.slogan}"
+              </p>
+            </div>
+            <button className={styles.favoriteButton}>
+              <IoEyeOutline />
+            </button>
+          </div>
+
           <button
             className={styles.infoCard}
             onClick={() => ScrollTo("reviews", { center: true })}
@@ -70,9 +100,14 @@ function ProductInfo({ producer }: ProductInfosProps) {
                 <span>
                   <FaHeart />
                 </span>
-                {producer.reviews?.length} Avaliações
+                {producer.metadata.rating
+                  ? producer.metadata.rating.toFixed(1)
+                  : "N/D"}
               </h2>
               <IoIosArrowDown />
+            </div>
+            <div className={styles.cardContent}>
+              {producer.reviews?.length} Avaliações
             </div>
           </button>
           <button
@@ -88,7 +123,9 @@ function ProductInfo({ producer }: ProductInfosProps) {
               </h2>
               <IoIosArrowDown />
             </div>
-            <ValueDropdown key={producer.id} producer={producer} />
+            <div className={styles.cardContent}>
+              <ValueDropdown key={producer.id} producer={producer} />
+            </div>
           </button>
           <button
             className={styles.infoCard}
@@ -103,10 +140,10 @@ function ProductInfo({ producer }: ProductInfosProps) {
               </h2>
               <IoIosArrowDown />
             </div>
-            <div className={styles.local}>
-              <strong className={styles.neighborhood}>
+            <div className={styles.cardContent}>
+              <h3 className={styles.neighborhood}>
                 {producer.locality.neighborhood}
-              </strong>
+              </h3>
               <span className={styles.localExtra}>
                 {producer.locality.city} - {producer.locality.state}
               </span>
@@ -129,9 +166,19 @@ function ProductInfo({ producer }: ProductInfosProps) {
               </span>
             </div>
           </button>
-        </div>
 
-        <button className={styles.seeMoreButton}>Veja Mais</button>
+          <button className={styles.seeMoreButton} onClick={handleSeeMore}>
+            {atBottom ? (
+              <>
+                <IoIosArrowUp /> Voltar ao topo
+              </>
+            ) : (
+              <>
+                <IoIosArrowDown /> Veja mais
+              </>
+            )}
+          </button>
+        </div>
 
         <div className={styles.productSpecifies}>
           <ul className={styles.specifiesList}>
