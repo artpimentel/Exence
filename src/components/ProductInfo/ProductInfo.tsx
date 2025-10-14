@@ -1,8 +1,6 @@
-import { Link } from "react-router-dom";
-
 import styles from "./ProductInfo.module.css";
-import { FaRegHeart } from "react-icons/fa6";
 
+import { FaRegHeart } from "react-icons/fa6";
 import { TbCoinFilled } from "react-icons/tb";
 import { HiLocationMarker } from "react-icons/hi";
 import { TbHomeCheck, TbHomeX } from "react-icons/tb";
@@ -13,6 +11,7 @@ import { FaWhatsapp, FaInstagram, FaTelegram } from "react-icons/fa6";
 
 import type { Producer } from "../../types/Producer";
 import ValueDropdown from "../ui/ValueDropdown/ValueDropdown";
+import ScrollTo from "../../utils/ScrollTo";
 
 interface ProductInfosProps {
   producer: Producer;
@@ -62,7 +61,10 @@ function ProductInfo({ producer }: ProductInfosProps) {
         </div>
 
         <div className={styles.infoContent}>
-          <Link to="#reviews" className={styles.infoCard}>
+          <button
+            className={styles.infoCard}
+            onClick={() => ScrollTo("reviews", { center: true })}
+          >
             <div className={styles.cardHeader}>
               <h2>
                 <span>
@@ -72,8 +74,11 @@ function ProductInfo({ producer }: ProductInfosProps) {
               </h2>
               <IoIosArrowDown />
             </div>
-          </Link>
-          <Link to="#values" className={styles.infoCard}>
+          </button>
+          <button
+            className={styles.infoCard}
+            onClick={() => ScrollTo("values", { center: true })}
+          >
             <div className={styles.cardHeader}>
               <h2>
                 <span>
@@ -84,8 +89,11 @@ function ProductInfo({ producer }: ProductInfosProps) {
               <IoIosArrowDown />
             </div>
             <ValueDropdown key={producer.id} producer={producer} />
-          </Link>
-          <Link to="#location" className={styles.infoCard}>
+          </button>
+          <button
+            className={styles.infoCard}
+            onClick={() => ScrollTo("location", { center: true })}
+          >
             <div className={styles.cardHeader}>
               <h2>
                 <span>
@@ -120,7 +128,7 @@ function ProductInfo({ producer }: ProductInfosProps) {
                 )}
               </span>
             </div>
-          </Link>
+          </button>
         </div>
 
         <button className={styles.seeMoreButton}>Veja Mais</button>

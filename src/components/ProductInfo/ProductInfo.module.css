@@ -150,9 +150,11 @@
 }
 
 .infoCard {
+  background: none;
   flex: 1 1 auto;
   padding: 12px;
 
+  border: none;
   border-radius: 8px;
   box-shadow: 0 0 0 1px var(--primary-complementary-color);
 
@@ -199,6 +201,8 @@
 .local {
   display: flex;
   flex-flow: column nowrap;
+
+  text-align: left;
 }
 
 .neighborhood {
