@@ -117,7 +117,7 @@
   padding: 4px 8px;
 
   color: var(--contrast-color);
-  font-size: 24px;
+  font-size: 20px;
   text-decoration: none;
 }
 
@@ -132,8 +132,8 @@
   border-radius: 8px;
   box-shadow: 0 0 8px black;
 
-  color: var(--contrast-color);
-  font-size: 24px;
+  color: var(--primary-color);
+  font-size: 20px;
 }
 
 .signUpMenu {
