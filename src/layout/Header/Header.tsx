@@ -5,11 +5,8 @@ import styles from "./Header.module.css";
 
 import Flag from "react-world-flags";
 import Logo from "../../../public/ExenceLogo.svg";
-import {
-  IoSearchOutline,
-  IoNotificationsOutline,
-  IoPersonOutline,
-} from "react-icons/io5";
+import { IoSearchOutline } from "react-icons/io5";
+import { IoIosArrowDown } from "react-icons/io";
 
 import Dropdown from "../../components/ui/Dropdown/Dropdown";
 
@@ -57,26 +54,26 @@ function Header() {
         </div>
 
         <div className={styles.headerButtons}>
-          <button className={styles.button}>
-            <IoNotificationsOutline />
-          </button>
-
           <Dropdown
             trigger={
-              <button className={styles.button}>
-                <IoPersonOutline />
+              <button className={`${styles.button} ${styles.signUp}`}>
+                Cadastre-se
+                <IoIosArrowDown />
               </button>
             }
           >
-            <div className={styles.profileMenu}>
-              <Link to="/signin" className={styles.dropdownItem}>
-                Log-In
+            <div className={styles.signUpMenu}>
+              <Link to="/signup/user" className={styles.menuItem}>
+                Como Cliente
               </Link>
-              <Link to="/login" className={styles.dropdownItem}>
-                Sign-In
+              <Link to="/signup/company" className={styles.menuItem}>
+                Como Anunciante
               </Link>
             </div>
           </Dropdown>
+          <Link to="/signin" className={styles.button}>
+            Entre
+          </Link>
         </div>
       </div>
     </header>

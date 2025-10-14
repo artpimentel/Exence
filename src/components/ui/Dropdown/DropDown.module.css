@@ -13,12 +13,12 @@
 }
 
 .menu {
-  background: var(--complementary-color);
+  background: var(--background-complementary-color);
   margin-top: 40px;
   padding: 8px;
 
   border-radius: 8px;
-  box-shadow: 0 0 8px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 0 4px rgba(0, 0, 0);
   overflow: hidden;
 
   position: absolute;
