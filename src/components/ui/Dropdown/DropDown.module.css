@@ -1,28 +1,41 @@
-@import "../../../styles/variables.css";
-
 .dropdown {
-  display: flex;
-  flex-flow: column nowrap;
-  align-items: center;
+  position: relative;
+  display: inline-block;
 }
 
 .trigger {
-  background: none;
-  border: none;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  gap: 8px;
+
   cursor: pointer;
 }
 
 .menu {
-  background: var(--background-complementary-color);
-  margin-top: 40px;
-  padding: 8px;
-
-  border-radius: 8px;
-  box-shadow: 0 0 4px rgba(0, 0, 0);
-  overflow: hidden;
+  opacity: 0;
+  width: 100%;
 
   position: absolute;
-  z-index: 10;
+  top: 100%;
+  left: 0;
+  z-index: 9999;
+  transform: translateY(-10px);
 
-  color: var(--contrast-color);
+  pointer-events: none;
+  transition: opacity 0.1s, transform 0.1s;
+}
+
+.menu.open {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.layout {
+  padding: 8px;
+
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 4px;
 }

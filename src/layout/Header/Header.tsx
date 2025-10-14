@@ -6,7 +6,6 @@ import styles from "./Header.module.css";
 import Flag from "react-world-flags";
 import Logo from "../../../public/ExenceLogo.svg";
 import { IoSearchOutline } from "react-icons/io5";
-import { IoIosArrowDown } from "react-icons/io";
 
 import Dropdown from "../../components/ui/Dropdown/Dropdown";
 
@@ -55,23 +54,18 @@ function Header() {
 
         <div className={styles.headerButtons}>
           <Dropdown
-            trigger={
-              <button className={`${styles.button} ${styles.signUp}`}>
-                Cadastre-se
-                <IoIosArrowDown />
-              </button>
-            }
+            trigger={"Cadastre-se"}
+            triggerClassName={styles.signUpTrigger}
+            menuClassName={styles.signUpMenu}
           >
-            <div className={styles.signUpMenu}>
-              <Link to="/signup/user" className={styles.menuItem}>
-                Como Cliente
-              </Link>
-              <Link to="/signup/company" className={styles.menuItem}>
-                Como Anunciante
-              </Link>
-            </div>
+            <Link to="/signup/user" className={styles.menuItem}>
+              Como Cliente
+            </Link>
+            <Link to="/signup/company" className={styles.menuItem}>
+              Como Anunciante
+            </Link>
           </Dropdown>
-          <Link to="/signin" className={styles.button}>
+          <Link to="/signin" className={styles.logInTrigger}>
             Entre
           </Link>
         </div>

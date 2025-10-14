@@ -113,34 +113,34 @@
   gap: 16px;
 }
 
-.button {
-  background: transparent;
-  padding: 8px;
-
-  border: none;
-  border-radius: 8px;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 12px;
+.logInTrigger {
+  padding: 4px 8px;
 
   color: var(--contrast-color);
-  font-family: Quicksand;
-  font-size: 20px;
+  font-size: 24px;
   text-decoration: none;
-
-  cursor: pointer;
 }
 
-.signUp {
+.logInTrigger:hover {
+  text-decoration: underline;
+}
+
+.signUpTrigger {
   background: var(--background-complementary-color);
+  padding: 4px 8px;
+
+  border-radius: 8px;
+  box-shadow: 0 0 8px black;
+
+  color: var(--contrast-color);
+  font-size: 24px;
 }
 
 .signUpMenu {
-  display: flex;
-  flex-flow: column nowrap;
-  gap: 8px;
+  background: var(--background-complementary-color);
+
+  border-radius: 8px;
+  box-shadow: 0 0 4px black;
 }
 
 .menuItem {
